@@ -1,0 +1,14 @@
+
+
+import com.example.demo.models.QuizResult;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface QuizResultRepository extends JpaRepository<QuizResult, Long> {
+    
+    // Этот метод найдет результат, в диапазон которого попадает сумма баллов
+    @Query("SELECT r FROM QuizResult r WHERE ?1 BETWEEN r.minScore AND r.maxScore")
+    QuizResult findResultByScore(int score);
+}
