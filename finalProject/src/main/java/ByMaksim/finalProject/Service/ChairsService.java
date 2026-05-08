@@ -20,7 +20,7 @@ public class ChairsService
     public List<Chairs> getChairsByPrice(double minPrice, double maxPrice) {
         return cr.findByPriceBetween(minPrice, maxPrice);
     }
-    public Chairs getChairByModel(String model) {
+    public List<Chairs> getChairByModel(String model) {
         return cr.findByModel(model);
     }
 

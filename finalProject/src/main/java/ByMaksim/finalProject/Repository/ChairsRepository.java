@@ -9,5 +9,5 @@ public interface ChairsRepository extends JpaRepository<Chairs, Long>
 {
     Chairs findById(long id);
     List<Chairs> findByPriceBetween(double minPrice, double maxPrice);
-    Chairs findByModel(String model);
+    List<Chairs> findByModel(String model);
 }
