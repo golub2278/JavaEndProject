@@ -14,9 +14,15 @@ public class ChairsController
         this.cs = cs;
     }
 
-    @GetMapping("/{id}")
-    public String getChair(@PathVariable Long id)
+    //@GetMapping("/{id}")
+    //public String getChair(@PathVariable Long id)
+    //{
+       // return cs.getChairById(id).toString();
+    //}
+
+    @GetMapping("/{min}/{max}")
+    public String getChairPriceBetween(@PathVariable double min, @PathVariable double max)
     {
-        return cs.getBookById(id).toString();
+        return cs.getChairsByPrice(min, max).toString();
     }
 }
