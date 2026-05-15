@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Свободных мест нет</title>
+    
+    <style>
+    .error-page-body {
+        background: #ffffff !important;
+        min-height: 100vh !important;
+        margin: 0; padding: 0;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-sizing: border-box;
+    }
+
+    .error-split-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        max-width: 1200px;
+        height: 70vh;
+        align-items: center;
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+
+    .error-animation-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .chair-scene {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        box-sizing: border-box;
+    }
+
+    /* ЛИНИЯ ПОЛА */
+    .floor-line {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: rgba(26, 26, 26, 0.18);
+        z-index: 0;
+    }
+
+    /* Премиальное кресло (Высота 220px) */
+    .anim-chair {
+        position: absolute;
+        bottom: 40px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 220px;
+        height: 220px;
+        color: #1a1a1a;
+        z-index: 1;
+    }
+
+    /* КОНТЕЙНЕР ПЕРСОНАЖА (Идеальная высота 260px для соразмерности со стулом) */
+    .cartoon-walker {
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        z-index: 2;
+        animation: mainWalkAndSitRoute 7s ease-in-out infinite;
+    }
+
+    /* СИЛУЭТ ХОДЬБЫ */
+    .human-walking-svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: #bf861b;
+        transform-origin: bottom center;
+        animation: bodyBobbing 0.6s ease-in-out infinite, walkPoseToggle 7s step-end infinite;
+    }
+
+    /* Анимация ног */
+    .human-walking-svg .leg-left {
+        transform-origin: 50px 50px;
+        animation: legSwingLeft 0.6s ease-in-out infinite alternate;
+    }
+    .human-walking-svg .leg-right {
+        transform-origin: 50px 50px;
+        animation: legSwingRight 0.6s ease-in-out infinite alternate;
+    }
+
+    /* СИЛУЭТ ПОСАДКИ */
+    .human-sitting-svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: #bf861b;
+        transform-origin: bottom center;
+        opacity: 0;
+        animation: sitPoseToggle 7s step-end infinite, smoothSitDown 7s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    }
+
+    /* ==========================================================================
+       ТОЧНАЯ МАТЕМАТИКА КООРДИНАТ ДЛЯ СРЕДНЕГО РОСТА
+       ========================================================================== */
+    @keyframes mainWalkAndSitRoute {
+        0%   { left: -160px; bottom: 40px; opacity: 0; } /* Старт строго на полу */
+        8%   { opacity: 1; }
+        /* Доходит четко до середины сиденья */
+        36%  { left: 18%; bottom: 40px; } 
+        42%  { left: 18%; bottom: 40px; } 
+        /* Опускается попой ровно на черную сидушку (bottom: 6px) */
+        50%  { left: 18%; bottom: 6px; } 
+        54%  { left: 18%; bottom: 2px; }  /* Микро-присед под весом */
+        60%  { left: 18%; bottom: 6px; }  /* Фиксация в покое */
+        86%  { left: 18%; bottom: 6px; opacity: 1; }
+        93%  { opacity: 0; }
+        100% { left: -160px; bottom: 40px; opacity: 0; }
+    }
+
+    /* Покачивание тела */
+    @keyframes bodyBobbing {
+        0%, 100% { transform: translateY(0) rotate(5deg); }
+        50%      { transform: translateY(-5px) rotate(3deg); }
+    }
+
+    /* Шаг ног */
+    @keyframes legSwingLeft {
+        0%   { transform: rotate(-22deg); }
+        100% { transform: rotate(18deg); }
+    }
+    @keyframes legSwingRight {
+        0%   { transform: rotate(18deg); }
+        100% { transform: rotate(-22deg); }
+    }
+
+    /* Мультяшная упругость при посадке */
+    @keyframes smoothSitDown {
+        0%, 42% { transform: scaleY(1.08) translateY(-15px); }
+        50%     { transform: scaleY(1) translateY(0); }
+        54%     { transform: scaleY(0.93) translateY(4px); }
+        60%, 86% { transform: scaleY(1) translateY(0); }
+    }
+
+    /* Переключатели отображения слоев */
+    @keyframes walkPoseToggle {
+        0% { opacity: 1; }
+        42% { opacity: 0; }
+        100% { opacity: 0; }
+    }
+    @keyframes sitPoseToggle {
+        0% { opacity: 0; }
+        42% { opacity: 1; } 
+        100% { opacity: 1; }
+    }
+
+    /* ТИПОГРАФИКА СПРАВА */
+    .error-text-side {
+        padding-left: 60px;
+        font-family: 'Inter', sans-serif;
+    }
+    .giant-404 {
+        font-family: 'Playfair Display', serif !important;
+        font-size: 11vw !important;
+        line-height: 0.9 !important;
+        font-weight: 900 !important;
+        color: #1a1a1a !important;
+        margin: 0 0 20px 0 !important;
+        letter-spacing: -0.03em;
+    }
+    .error-heading {
+        font-family: 'Playfair Display', serif !important;
+        font-size: 28px !important;
+        letter-spacing: 0.05em;
+        color: #bf861b !important;
+        margin: 0 0 15px 0 !important;
+    }
+    .error-subtext {
+        font-size: 15px;
+        line-height: 1.6;
+        color: rgba(26, 26, 26, 0.6) !important;
+        max-width: 420px;
+        margin-bottom: 35px;
+    }
+    .back-to-home-btn {
+        display: inline-block;
+        background: #1a1a1a;
+        color: #ffffff !important;
+        text-decoration: none;
+        padding: 16px 35px;
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+    }
+    .back-to-home-btn:hover {
+        background: #bf861b;
+        transform: translateY(-2px);
+    }
+    @media (max-width: 768px) {
+        .error-split-container { grid-template-columns: 1fr; height: auto; gap: 40px; text-align: center; }
+        .error-text-side { padding-left: 0; display: flex; flex-direction: column; align-items: center; }
+    }
+    </style>
+</head>
+<body class="error-page-body">
+
+    <div class="error-split-container">
+        
+        <!-- ЛЕВАЯ КОЛОНКА С КОРРЕКТНЫМ РОСТОМ -->
+        <div class="error-animation-side">
+            <div class="chair-scene">
+                
+                <!-- ЛИНИЯ ПОЛА -->
+                <div class="floor-line"></div>
+                
+                <!-- ПЕРСОНАЖ ОПТИМАЛЬНОГО РАЗМЕРА -->
+                <div class="cartoon-walker">
+                    <!-- ХОДЬБА (Лицом влево) -->
+                    <svg class="human-walking-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                        <circle cx="50" cy="20" r="5.5" stroke-width="3"/>
+                        <path d="M50,26 L48,50 M48,34 L58,46" stroke-width="3" stroke-linecap="round"/>
+                        <path class="leg-left" d="M48,50 L42,78" stroke-width="3" stroke-linecap="round"/>
+                        <path class="leg-right" d="M48,50 L56,78" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+
+                    <!-- ПОСАДКА (Анатомически верная) -->
+                    <svg class="human-sitting-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                        <circle cx="50" cy="20" r="5.5" stroke-width="3"/>
+                        <path d="M50,26 L51,50 L32,52 L34,80 M51,40 L38,42 L36,54" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <!-- КРЕСЛО НА СВОЕМ МЕСТЕ -->
+                <svg class="anim-chair" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                    <path d="M32,25 Q50,20 68,25 Q72,45 68,60" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M28,60 C40,63 60,63 72,60" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M28,45 L32,60 M72,45 L68,60" stroke-width="2"/>
+                    <path d="M34,62 L26,88 M66,62 L74,88 M40,62 L42,88 M60,62 L58,88" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                
+            </div>
+        </div>
+
+        <!-- ПРАВАЯ КОЛОНКА -->
+        <div class="error-text-side">
+            <h1 class="giant-404">404</h1>
+            <h2 class="error-heading">ЗАНЯТО.</h2>
+            <p class="error-subtext">
+                Похоже, это кресло уже кто-то занял, либо такой страницы никогда не существовало в нашей базе данных.
+            </p>
+            <a href="index.html" class="back-to-home-btn">НАЙТИ СВОЁ КРЕСЛО →</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
