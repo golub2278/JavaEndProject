@@ -1,0 +1,719 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог | BYN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="art-hero">
+ <div class="title-wrap">
+            <h1 class="title-solid">MA</h1>
+            <h1 class="title-outline">CHAISE</h1>
+            <span class="side-label">DESIGN SERIES 2024</span>
+        </div>
+       
+    <div class="hero-glow"></div> 
+    <div class="decor-line-v"></div>
+    <div class="hero-inner">
+    
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <span class="chapter">CHAPTER I</span>
+                <h2>ЭСТЕТИКА <br> ФОРМЫ</h2>
+                <p>Исследование пространства через лимитированные предметы интерьера.</p>
+                <div class="hero-cta">
+                    <a href="#catalog">ИССЛЕДОВАТЬ</a>
+
+                    <div class="cta-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tech-tag top-right">53.9007° N, 27.5590° E</div>
+    <div class="tech-tag bottom-left">OAK / LINEN / STEEL</div>
+</section>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <div class="logo-circle">BY</div>
+                <div class="logo-text">
+                    <h1>Ma Chaise</h1>
+                    <span>IT ACADEMY PROVENCE</span>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="#card-flip">пройди тест и узнай</a>
+                <a href="#">каталог</a>
+                <a href="#about">о нас</a>
+                <a href="#footer">контакты</a>
+            </nav>
+
+            <div id="test"class="user-tools">
+                <span class="currency">-100 BYN</span>
+               <a href="404.html" style="text-decoration: none; color: inherit;">
+    <button class="tool-icon cart-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <span class="cart-count">0</span>
+    </button>
+</a>
+
+            </div>
+        </div>
+    </header>
+<section class="quiz-section">
+    <canvas id="quiz-dynamic-bg"></canvas> 
+<script>
+
+const canvas = document.getElementById('quiz-dynamic-bg');
+const ctx = canvas.getContext('2d');
+
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
+
+window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+});
+
+
+let mouse = { x: width / 2, y: height / 2, targetX: width / 2, targetY: height / 2 };
+document.addEventListener('mousemove', (e) => {
+    mouse.targetX = e.clientX;
+    mouse.targetY = e.clientY;
+});
+
+const spheres = [];
+const sphereCount = 6; 
+
+for (let i = 0; i < sphereCount; i++) {
+    spheres.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: Math.random() * 60 + 100, 
+        speedX: Math.random() * 0.3 - 0.15,
+        speedY: Math.random() * 0.3 - 0.15
+    });
+}
+
+let time = 0;
+function animate() {
+    ctx.clearRect(0, 0, width, height);
+    mouse.x += (mouse.targetX - mouse.x) * 0.04;
+    mouse.y += (mouse.targetY - mouse.y) * 0.04;
+    
+    time += 0.0025; 
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(26, 26, 26, 0.06)'; 
+    ctx.lineWidth = 6; 
+    ctx.lineCap = 'round';
+    
+    for (let i = 0; i < width; i += 10) {
+        let yOffset = Math.sin(i * 0.002 + time) * 130;
+        let mouseInfluence = Math.exp(-Math.pow(i - mouse.x, 2) / (2 * Math.pow(380, 2))) * (mouse.y - height / 2) * 0.55;
+        let y = height * 0.5 + yOffset + mouseInfluence;
+        
+        if (i === 0) ctx.moveTo(i, y);
+        else ctx.lineTo(i, y);
+    }
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(191, 134, 27, 0.07)'; 
+    ctx.lineWidth = 4;
+    
+    for (let i = 0; i < width; i += 10) {
+        let yOffset = Math.cos(i * 0.0015 + time * 1.2) * 95;
+        let mouseInfluence = Math.exp(-Math.pow(i - mouse.x, 2) / (2 * Math.pow(320, 2))) * (mouse.y - height / 2) * 0.35;
+        let y = height * 0.46 + yOffset + mouseInfluence;
+        
+        if (i === 0) ctx.moveTo(i, y);
+        else ctx.lineTo(i, y);
+    }
+    ctx.stroke();
+
+    spheres.forEach(s => {
+        // Параллакс эффект относительно мыши
+        let currentX = s.x + (mouse.x - width / 2) * 0.025;
+        let currentY = s.y + (mouse.y - height / 2) * 0.025;
+        
+        s.x += s.speedX;
+        s.y += s.speedY;
+        
+        // Бесшовный перезапуск сфер при вылете за экран
+        if (s.x < -s.radius) s.x = width + s.radius;
+        if (s.x > width + s.radius) s.x = -s.radius;
+        if (s.y < -s.radius) s.y = height + s.radius;
+        if (s.y > height + s.radius) s.y = -s.radius;
+
+        // Построение объемного градиента БЕЗ эффекта бублика
+        let gradient = ctx.createRadialGradient(
+            currentX - s.radius * 0.15, currentY - s.radius * 0.15, 0, 
+            currentX, currentY, s.radius
+        );
+        
+        gradient.addColorStop(0, 'rgba(255, 255, 255, 0.5)');      // Нежный центральный блик
+        gradient.addColorStop(0.25, 'rgba(191, 134, 27, 0.35)');    // Плотное золотое ядро
+        gradient.addColorStop(0.55, 'rgba(191, 134, 27, 0.12)');    // Рассеивание
+        gradient.addColorStop(0.85, 'rgba(242, 236, 228, 0.02)');   // Плавное сведение цвета
+        gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');         // Полная прозрачность
+
+        ctx.beginPath();
+        ctx.fillStyle = gradient;
+        ctx.arc(currentX, currentY, s.radius, 0, Math.PI * 2);
+        ctx.fill();
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+// ==========================================================================
+// 3. ЛОГИКА ИНТЕРФЕЙСА КВИЗА
+// ==========================================================================
+function flipCard() {
+    const card = document.getElementById('card-flip');
+    if (card) {
+        card.style.transform = 'rotateY(180deg)';
+        updateProgressBar(10);
+    }
+}
+
+function updateProgressBar(percent) {
+    const bar = document.getElementById('bar');
+    if (bar) {
+        bar.style.width = percent + '%';
+    }
+}
+
+function showQuizResult(typeText, titleText, descriptionText) {
+    const questionArea = document.getElementById('question-area');
+    if (questionArea) questionArea.style.display = 'none';
+    
+    const resType = document.getElementById('res-type');
+    const resTitle = document.getElementById('res-title');
+    const resDesc = document.getElementById('res-desc');
+    const resultArea = document.getElementById('result-area');
+    
+    if (resType) resType.innerText = typeText;
+    if (resTitle) resTitle.innerText = titleText;
+    if (resDesc) resDesc.innerHTML = descriptionText;
+    
+    if (resultArea) resultArea.style.display = 'block';
+    updateProgressBar(100);
+}
+
+function restartQuiz() {
+    const card = document.getElementById('card-flip');
+    const resultArea = document.getElementById('result-area');
+    const questionArea = document.getElementById('question-area');
+    
+    if (card) card.style.transform = 'rotateY(0deg)';
+    
+    setTimeout(() => {
+        if (resultArea) resultArea.style.display = 'none';
+        if (questionArea) questionArea.style.display = 'block';
+        updateProgressBar(0);
+    }, 400); 
+}
+</script>
+
+    <div class="quiz-container">
+     
+        <div class="quiz-progress"><div class="progress-bar" id="bar"></div></div>
+
+        <div class="card-scene">
+            <div class="card-inner" id="card-flip">
+                
+                
+                <div class="card-face card-front">
+                    <div class="card-content">
+                        <span class="chapter">INDIVIDUAL APPROACH</span>
+                        <h2>МЫ ДУМАЕМ <br> О ВАС</h2>
+                        <p>В MA CHAISE. Пройдите наш аналитический тест, и мы вычислим идеальную форму комфорта специально для вас.</p>
+                        <button class="start-quiz-btn" onclick="flipCard()">ПРОЙТИ ТЕСТ</button>
+                    </div>
+                </div>
+
+               
+                <div class="card-face card-back">
+                    <div id="quiz-flow" class="card-content">
+                        <div id="question-area">
+                            <span class="step-num" id="q-num">01 / 10</span>
+                            <h3 id="q-title">Загрузка...</h3>
+                            <div class="options-grid" id="q-options"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// ВСЕ 10 ВОПРОСОВ ИЗ ТВОЕЙ БД
+const questions = [
+    { q: "Если бы про твою жизнь сняли кино, какой бы это был жанр?", a: [["Космическая опера", 5], ["Готический хоррор", 2], ["Психологическая драма", 3], ["Визуальный Киберпанк", 4], ["Вестерн", 1]] },
+    { q: "Твоя идеальная геометрическая форма для покорения пространства?", a: [["Монолитный Куб", 1], ["Идеальный Круг", 2], ["Текучая Плазма", 3], ["Плавная Спираль", 4], ["Фрактальный Многоугольник", 5]] },
+    { q: "Какое существо просыпается в тебе в воскресенье?", a: [["Древний Голем", 1], ["Ртутный Лис", 2], ["Морской Кракен", 3], ["Мудрый Сфинкс", 4], ["Кибер-Феникс", 5]] },
+    { q: "Какой оттенок энергии пульсирует в твоей ауре?", a: [["Цвет Глубокой Коры", 1], ["Стальной Хром", 2], ["Радужный Туман", 3], ["Мягкий Янтарный", 4], ["Электрический Ультрафиолет", 5]] },
+    { q: "Реши уравнение судьбы: (Труд + Время) * Х = Успех. Что такое Х?", a: [["Константа Стойкости", 1], ["Коэффициент Мобильности", 2], ["Формула Покоя", 3], ["Амплитуда Колебаний", 4], ["Вычислительная Мощность", 5]] },
+    { q: "К какой природной стихии ты себя причисляешь?", a: [["Незыблемая Скала", 1], ["Горный Поток", 2], ["Летнее Облако", 3], ["Спокойное Озеро", 4], ["Поток Информации", 5]] },
+    { q: "Твой самый темный кошмар, от которого стынет кровь?", a: [["Острое Пламя", 1], ["Липкая Паутина", 2], ["Пустота и Одиночество", 3], ["Резкий Обрыв", 4], ["Системная Ошибка", 5]] },
+    { q: "Какой магический артефакт ты бы выбрал для защиты?", a: [["Щит Титана", 1], ["Кольцо Телепортации", 2], ["Плащ-Невидимка", 3], ["Амулет Времени", 4], ["Плазменный Клинок", 5]] },
+    { q: "Что ты видишь на горизонте своих самых смелых желаний?", a: [["Вечный Город", 1], ["Бесконечная Дорога", 2], ["Остров Забвения", 3], ["Старый Маяк", 4], ["Цифровая Цитадель", 5]] },
+    { q: "Как ты относишься к мелким помехам (вроде крошек)?", a: [["Абсолютное Отрицание", 1], ["Эффект Игнорирования", 2], ["Естественное Поглощение", 3], ["Философское Смирение", 4], ["Технический Сбой", 5]] }
+];
+
+let currentQ = 0;
+let totalScore = 0;
+
+function flipCard() {
+    document.getElementById('card-flip').classList.add('is-flipped');
+    setTimeout(() => showQuestion(0), 300);
+}
+
+function showQuestion(index) {
+    if (index >= questions.length) {
+        sendToBackend();
+        return;
+    }
+    const qData = questions[index];
+    document.getElementById('q-num').innerText = `${String(index + 1).padStart(2, '0')} / 10`;
+    document.getElementById('q-title').innerText = qData.q;
+    
+    const optionsHtml = qData.a.map(opt => 
+        `<button class="quiz-opt-btn" onclick="handleAnswer(${opt[1]})">${opt[0]}</button>`
+    ).join('');
+    
+    document.getElementById('q-options').innerHTML = optionsHtml;
+    document.getElementById('bar').style.width = ((index + 1) / questions.length) * 100 + '%';
+}
+
+function handleAnswer(pts) {
+    totalScore += pts;
+    currentQ++;
+    document.getElementById('quiz-flow').style.opacity = 0;
+    setTimeout(() => {
+        showQuestion(currentQ);
+        document.getElementById('quiz-flow').style.opacity = 1;
+    }, 400);
+}
+
+function sendToBackend() {
+    // Показываем твою анимацию загрузки
+    document.getElementById('quiz-flow').innerHTML = "<div class='loader'>АНАЛИЗ ДНК КОМФОРТА...</div>";
+
+    // Небольшая задержка в 1 секунду для реалистичности
+    setTimeout(() => {
+        let chairName = "";
+        let description = "";
+
+        // Логика распределения стульев на основе набранных баллов (totalScore)
+        if (totalScore >= 40) {
+            chairName = "Кожаное кресло руководителя";
+            description = "Вы рождены для управления и тотального комфорта. Статус и надежность — ваше всё.";
+        } else if (totalScore >= 25) {
+            chairName = "Эргономичный компьютерный стул";
+            description = "Идеальный баланс между эффективной работой и заботой о спине. Вы продуктивны и современны.";
+        } else {
+            chairName = "Классическая табуретка";
+            description = "Простота, устойчивость и надежность. Проверенное временем решение, готовое к любой ситуации.";
+        }
+
+        // Выводим результат в твой блок result-area, как и планировалось
+        document.getElementById('quiz-flow').innerHTML = `
+            <div class="result-area" style="text-align: center; padding: 20px;">
+                <h3 class="result-title">Тест пройден!</h3>
+                <h2 style="font-size: 24px; color: #4CAF50; margin: 10px 0;">Вы — ${chairName}</h2>
+                <p style="font-size: 16px; color: #555; margin-bottom: 15px;">${description}</p>
+                <button class="start-quiz-btn" onclick="location.reload()">Пройти снова</button>
+            </div>
+        `;
+    }, 1000);
+
+}
+</script>
+
+
+    
+    <!-- <main class="main-container" id="catalog">
+        <div class="control-bar">
+            <div class="view-switch">
+                <button class="view-btn">⬛⬛</button>
+                <button class="view-btn">☰</button>
+            </div>
+            <div class="results-count">12 ТОВАРОВ</div>
+            <div class="sort-dropdown">СОРТИРОВКА ▽</div>
+        </div>
+
+        <div class="catalog-grid">
+           
+            <div class="item-card">
+                <div class="placeholder-box color-1">
+                    
+                
+                    <button class="quick-add">В КОРЗИНУ</button>
+                </div>
+                <div class="item-details">
+                    <h3>НАЗВАНИЕ ТОВАРА</h3>
+                    <p class="price">120.00 BYN</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="placeholder-box color-2">
+                    
+                    <button class="quick-add">В КОРЗИНУ</button>
+                </div>
+                <div class="item-details">
+                    <h3>НАЗВАНИЕ ТОВАРА</h3>
+                    <p class="price">85.50 BYN</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="placeholder-box color-3">
+                
+                    <button class="quick-add">В КОРЗИНУ</button>
+                </div>
+                <div class="item-details">
+                    <h3>НАЗВАНИЕ ТОВАРА</h3>
+                    <p class="price">210.00 BYN</p>
+                </div>
+            </div>
+        </div>
+    </main> --> 
+
+    <div class="chez-catalog-wrapper">
+    
+    <!-- ВЕРХНЯЯ НАВИГАЦИОННАЯ ПАНЕЛЬ ФИЛЬТРОВ И СОРТИРОВКИ -->
+    <div class="catalog-toolbar">
+        <div class="toolbar-left">
+            <!-- Кнопка, которая будет открывать/закрывать панель фильтров -->
+            <button class="toolbar-btn toggle-filters-btn" id="open-filters-btn">
+                <span>Фильтры</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+        </div>
+        
+        <div class="toolbar-center">
+            <span class="products-counter" id="total-count">545 товаров</span>
+        </div>
+        
+        <div class="toolbar-right">
+            <!-- Кнопка для открытия выпадающего меню сортировки -->
+            <div class="sort-dropdown-wrapper">
+                <button class="toolbar-btn" id="open-sort-btn">
+
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ВЫПАДАЮЩАЯ ГОРИЗОНТАЛЬНАЯ ПАНЕЛЬ С ФИЛЬТРАМИ (Изначально скрыта) -->
+    <div class="filter-dropdown-panel" id="filters-panel">
+        <div class="panel-inner-grid">
+            
+            <!-- Колонка 1: Выбор цены -->
+            <div class="filter-column">
+                <h4 class="column-title">Ценовой диапазон (BYN)</h4>
+                <div class="price-inputs">
+                    <input type="number" id="price-min" placeholder="От 0" min="0">
+                    <span class="line-sep">—</span>
+                    <input type="number" id="price-max" placeholder="До 5000" min="0">
+                </div>
+            </div>
+
+            <!-- Колонка 2: Основные категории -->
+            <div class="filter-column">
+                <h4 class="column-title">Назначение</h4>
+                <div class="checkbox-group">
+                    <label class="custom-checkbox"><input type="checkbox" name="category" value="DINING"><span>Обеденные стулья</span></label>
+                    <label class="custom-checkbox"><input type="checkbox" name="category" value="COMPUTER"><span>Компьютерные кресла</span></label>
+                    <label class="custom-checkbox"><input type="checkbox" name="category" value="BAR"><span>Барные стулья</span></label>
+                    <label class="custom-checkbox"><input type="checkbox" name="category" value="ROCKING"><span>Кресла-качалки</span></label>
+                </div>
+            </div>
+
+            <!-- Колонка 3: Специфические категории -->
+            <div class="filter-column">
+                <h4 class="column-title">Тип конструкции</h4>
+                <div class="checkbox-group">
+                    <label class="custom-checkbox"><input type="checkbox" name="category" value="FRAME"><span>Каркасные</span></label>
+                    <label class="custom-checkbox"><input type="checkbox" name="category" value="FRAMELESS"><span>Бескаркасные</span></label>
+                    <label class="custom-checkbox"><input type="checkbox" name="category" value="GAMING"><span>Геймерские</span></label>
+                    <label class="custom-checkbox"><input type="checkbox" name="category" value="PETS"><span>Для питомцев</span></label>
+                </div>
+            </div>
+
+        </div>
+        <div class="panel-actions">
+            <button class="action-btn clear-btn" id="btn-clear-all">Очистить всё</button>
+            <button class="action-btn apply-btn" id="btn-apply-filters">Применить фильтры</button>
+        </div>
+    </div>
+
+    <!-- СЕТКА КАТАЛОГА ОТ КРАЯ ДО КРАЯ (3 В РЯД КАК НА СКРИНШОТЕ) -->
+    <main class="products-grid" id="catalog-grid">
+        
+        <!-- КАРТОЧКА-ШАБЛОН ОФОРМЛЕННАЯ ПОД ЧИСТЫЙ МИНИМАЛИЗМ -->
+        <div class="product-card">
+            <div class="img-container">
+                <button class="like-button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </button>
+                <img src="images/chair1.png" alt="Стул" class="main-product-img">
+            </div>
+            <div class="product-meta-info">
+                <h3 class="product-name">Антикварный металлический стул Provence</h3>
+                <p class="product-price">420 BYN</p>
+            </div>
+        </div>
+
+        <!-- Пример карточки 2 -->
+        <div class="product-card">
+            <div class="img-container">
+                <button class="like-button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+                <img src="images/chair2.png" alt="Стул" class="main-product-img">
+            </div>
+            <div class="product-meta-info">
+                <h3 class="product-name">Пара дизайнерских стульев Mushroom</h3>
+                <p class="product-price">890 BYN</p>
+            </div>
+        </div>
+
+    </main>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const filtersBtn = document.getElementById("open-filters-btn");
+    const filtersPanel = document.getElementById("filters-panel");
+    const sortBtn = document.getElementById("open-sort-btn");
+    const sortMenu = document.getElementById("sort-menu");
+
+    // Открытие/закрытие верхней панели фильтров
+    filtersBtn.addEventListener("click", () => {
+        filtersPanel.classList.toggle("open");
+        sortMenu.classList.remove("open"); // Закрываем сортировку, если открыли фильтры
+    });
+
+    // Открытие/закрытие меню сортировки
+    sortBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        sortMenu.classList.toggle("open");
+    });
+
+    // Закрывать сортировку при клике в любое другое место экрана
+    document.addEventListener("click", () => {
+        sortMenu.classList.remove("open");
+    });
+});
+
+</script>
+
+<section id="about" class="about-editorial">
+    <div class="editorial-container">
+        <!-- ЛЕВАЯ ЧАСТЬ: Навигация по истории -->
+        <div class="editorial-nav">
+            <span class="chapter-label">03 / ABOUT US</span>
+            <div class="nav-item active" onclick="showTab(1)">
+                <span class="num">01</span>
+                <h3>КТО МЫ ТАКИЕ</h3>
+                <p>Трио программистов из IT Academy, влюбленных в минимализм и чистый код.</p>
+            </div>
+            <div class="nav-item" onclick="showTab(2)">
+                <span class="num">02</span>
+                <h3>НАША ЦЕЛЬ</h3>
+                <p>Создать алгоритм, который подбирает комфорт на основе вашей психологии.</p>
+            </div>
+            <div class="nav-item" onclick="showTab(3)">
+                <span class="num">03</span>
+                <h3>ТРУДНОСТИ</h3>
+                <p>Битва с Java-логикой, настройка Spring Boot и бессонные ночи над CSS.</p>
+            </div>
+            <div class="nav-item" onclick="showTab(4)">
+                <span class="num">04</span>
+                <h3>ВЕСЕЛЫЕ МОМЕНТЫ</h3>
+                <p>Эйфория от работающего кода в 4 утра и бесконечные мемы в рабочем чате.</p>
+            </div>
+        </div>
+
+        <!-- ПРАВАЯ ЧАСТЬ: Статичное фото-поле (Альбом) -->
+        <div class="editorial-gallery">
+            <div id="tab-1" class="gallery-tab active">
+                <div class="photo-main">PHOTO 01</div>
+                <div class="photo-side">PHOTO 02</div>
+            </div>
+            <div id="tab-2" class="gallery-tab">
+                <div class="photo-main">PHOTO 03</div>
+                <div class="photo-side">PHOTO 04</div>
+            </div>
+            <div id="tab-3" class="gallery-tab">
+                <div class="photo-main">PHOTO 05</div>
+                <div class="photo-side">PHOTO 06</div>
+                <div class="photo-mini">PHOTO 07</div>
+            </div>
+            <div id="tab-4" class="gallery-tab">
+                <div class="photo-main">PHOTO 08</div>
+                <div class="photo-side">PHOTO 09</div>
+                <div class="photo-mini">PHOTO 10</div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+function showTab(num) {
+    // 1. Сбрасываем все активные элементы навигации
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    // 2. Скрываем все вкладки галереи
+    document.querySelectorAll('.gallery-tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // 3. Активируем нужную навигацию (индекс на 1 меньше номера шага)
+    document.querySelectorAll('.nav-item')[num - 1].classList.add('active');
+    
+    // 4. Показываем нужную галерею
+    document.getElementById('tab-' + num).classList.add('active');
+}
+</script>
+
+
+
+
+
+
+    
+<footer class="site-footer" id="footer">
+<canvas id="footer-ambient-bg"></canvas>
+    <div class="footer-bg-text-wrapper" id="footer-bg-text">PROVENCE</div>
+
+    <div class="footer-wrapper">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <h2>BRAND NAME</h2>
+                <span class="location">EST. 2026 / IT ACADEMY</span>
+            </div>
+            <p class="footer-promo">Подпишитесь, чтобы получать новости о закрытых мероприятиях и новых коллекциях.</p>
+            
+            <form class="inline-subscribe">
+                <input type="email" placeholder="Ваш e-mail" class="minimal-input">
+                <button type="submit" class="minimal-btn">ОТПРАВИТЬ</button>
+            </form>
+        </div>
+
+       
+        <div class="footer-divider">
+            <div class="line"></div>
+            <div class="symbol">✧</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="footer-right">
+            <h3 class="social-title">СЛЕДИТЕ ЗА НАМИ</h3>
+            <div class="social-icons">
+              
+                <a href="https://www.instagram.com/grodnoitacademypark/"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                <a href="#"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                <a href="#"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8c-2.21 0-4 1.79-4 4 0 1.5.83 2.82 2.06 3.51L9 21l3-2 3 2-1.06-5.49C15.17 14.82 16 13.5 16 12c0-2.21-1.79-4-4-4z"></path></svg></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom-line">
+        <p>© 67 Ma Chaise. ALL RIGHTS RESERVED</p>
+        <div class="pay-icons">VISA  •  MASTERCARD  •  BELCART</div>
+    </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const canvas = document.getElementById('footer-ambient-bg');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const footer = document.getElementById('footer');
+
+    let width = canvas.width = footer.offsetWidth;
+    let height = canvas.height = footer.offsetHeight;
+
+    window.addEventListener('resize', () => {
+        width = canvas.width = footer.offsetWidth;
+        height = canvas.height = footer.offsetHeight;
+    });
+
+    // Настройки позиции света и плавности дотягивания
+    let light = { x: width / 2, y: height / 2, targetX: width / 2, targetY: height / 2, alpha: 0, targetAlpha: 0 };
+
+    footer.addEventListener('mousemove', (e) => {
+        const rect = footer.getBoundingClientRect();
+        light.targetX = e.clientX - rect.left;
+        light.targetY = e.clientY - rect.top;
+        light.targetAlpha = 1; // Проявляем блик при движении
+    });
+
+    footer.addEventListener('mouseleave', () => {
+        light.targetAlpha = 0; // Плавно тушим свет, когда мышь уходит
+    });
+
+    function drawAmbientLight() {
+        ctx.clearRect(0, 0, width, height);
+
+        // Инерция движения света
+        light.x += (light.targetX - light.x) * 0.05;
+        light.y += (light.targetY - light.y) * 0.05;
+        light.alpha += (light.targetAlpha - light.alpha) * 0.05;
+
+        if (light.alpha > 0.01) {
+            // Создаем рассеянный радиальный градиент (ваше фирменное золото)
+            let gradient = ctx.createRadialGradient(
+                light.x, light.y, 10, 
+                light.x, light.y, 280 // Радиус рассеивания света
+            );
+            
+            // Распределение золотого свечения
+            gradient.addColorStop(0, `rgba(191, 134, 27, ${light.alpha * 0.12})`);
+            gradient.addColorStop(0.4, `rgba(242, 236, 228, ${light.alpha * 0.04})`);
+            gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+        }
+
+        requestAnimationFrame(drawAmbientLight);
+    }
+
+    drawAmbientLight();
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const bgText = document.getElementById('footer-bg-text');
+    
+    if (bgText) {
+        // Устанавливаем базовый плавный переход для цвета
+        bgText.style.transition = "color 1.5s cubic-bezier(0.25, 1, 0.5, 1)";
+        bgText.style.color = "#ffffff"; // Изначально текст белый
+
+        // Таймер: через 2500 миллисекунд (2.5 секунды) текст плавно станет черным
+        setTimeout(() => {
+            bgText.style.color = "#0d0d0d"; 
+        }, 2500);
+    }
+});
+</script>
+
+
+</body>
+</html>

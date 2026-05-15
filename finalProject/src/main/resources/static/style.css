@@ -1,0 +1,1210 @@
+/* 1. БАЗОВЫЕ НАСТРОЙКИ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif; /* Элегантный шрифт с засечками */
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* 2. ЗАКРЕПЛЕННАЯ ШАПКА */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+/* Логотип */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #999999;
+}
+
+.logo-text h1 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.logo-text span {
+    font-size: 9px;
+    color: #aaaaaa;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 1px;
+}
+
+/* Навигация */
+.main-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #444444;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #000000;
+}
+
+/* Инструменты и Корзина */
+.user-tools {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.currency {
+    font-size: 11px;
+    color: #777777;
+    font-weight: bold;
+}
+
+.tool-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 9px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+/* 3. КОНТЕНТНАЯ ОБЛАСТЬ */
+.main-container {
+    margin-top: 110px; /* Отступ, чтобы шапка не перекрывала контент */
+    padding: 0 40px 60px;
+}
+
+/* Панель фильтров */
+.control-bar {
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 11px;
+    color: #bbbbbb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.view-switch {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* 4. СЕТКА ТОВАРОВ */
+.catalog-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 50px 30px;
+}
+
+.item-card {
+    text-align: center;
+    position: relative;
+}
+
+/* Цветные боксы */
+.placeholder-box {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    position: relative;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    transition: transform 0.4s ease;
+}
+
+.item-card:hover .placeholder-box {
+    transform: translateY(-5px);
+}
+
+.color-1 { background-color: #f2ece4; }
+.color-2 { background-color: #e4eaf2; }
+.color-3 { background-color: #f2e4e4; }
+.color-4 { background-color: #eaf2e4; }
+.color-5 { background-color: #f2f2e4; }
+.color-6 { background-color: #ede4f2; }
+
+.heart-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px;
+    color: #555555;
+    cursor: pointer;
+}
+
+/* Кнопка "В КОРЗИНУ" (появляется при наведении) */
+.quick-add {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 12px 25px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.item-card:hover .quick-add {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.quick-add:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Описание под боксом */
+.item-details {
+    margin-top: 20px;
+}
+
+.item-details h3 {
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.price {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* 5. АДАПТИВНОСТЬ (для телефонов) */
+@media (max-width: 900px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog-grid {
+        grid-template-columns: 1fr; /* 1 колонка на телефонах */
+    }
+    .main-nav {
+        display: none; /* Прячем меню на очень маленьких экранах для чистоты */
+    }
+}
+/* --- ФИНАЛЬНЫЙ СТИЛЬНЫЙ ПОДВАЛ --- */
+
+.site-footer {
+    position: relative; /* Нужно для позиционирования фонового текста */
+    background-color: #fcfcfc;
+    padding: 100px 60px 40px;
+    border-top: 1px solid #eeeeee;
+    margin-top: 100px;
+    overflow: hidden; /* Чтобы огромный фоновый текст не создавал прокрутку */
+}
+
+/* 1. Декоративный фоновый текст (тот самый лоск) */
+.footer-bg-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw; /* Огромный размер, зависящий от ширины экрана */
+    font-weight: 900;
+    color: #f4f4f4; /* Очень бледный, едва заметный цвет */
+    z-index: 0;
+    pointer-events: none; /* Чтобы текст не мешал кликать по ссылкам */
+    letter-spacing: 25px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* 2. Основная обертка */
+.footer-wrapper {
+    position: relative;
+    z-index: 1; /* Контент всегда выше фона */
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Выравнивание по центру для баланса */
+}
+
+/* ЛЕВАЯ ЧАСТЬ */
+.footer-left {
+    flex: 1;
+    max-width: 450px;
+}
+
+.footer-logo h2 {
+    font-size: 32px;
+    letter-spacing: 6px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.location {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #999999;
+    text-transform: uppercase;
+}
+
+.footer-promo {
+    margin: 25px 0;
+    font-size: 13px;
+    color: #666666;
+    letter-spacing: 0.5px;
+    max-width: 350px;
+}
+
+/* Элегантная форма подписки (линия) */
+.inline-subscribe {
+    display: flex;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 5px;
+    max-width: 350px;
+}
+
+.minimal-input {
+    background: transparent;
+    border: none;
+    padding: 10px 0;
+    flex-grow: 1;
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+}
+
+.minimal-btn {
+    background: transparent;
+    border: none;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding-left: 20px;
+    transition: opacity 0.3s;
+}
+
+.minimal-btn:hover {
+    opacity: 0.6;
+}
+
+/* 3. ЦЕНТРАЛЬНЫЙ ДЕКОР (Разделитель) */
+.footer-divider {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    opacity: 0.2; /* Едва заметный */
+    margin: 0 40px;
+}
+
+.footer-divider .line {
+    width: 1px;
+    height: 80px;
+    background: #000000;
+}
+
+.footer-divider .symbol {
+    font-size: 20px;
+}
+
+/* 4. ПРАВАЯ ЧАСТЬ (СОЦСЕТИ) */
+.footer-right {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-title {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #999999;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.social-icons {
+    display: flex;
+    gap: 30px; /* Большой отступ между иконками */
+}
+
+.social-icons a {
+    color: #333333;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.social-icons a svg {
+    display: block;
+    width: 28px; /* Увеличенный размер */
+    height: 28px;
+    stroke-width: 1.1; /* Тонкие изящные линии */
+}
+
+.social-icons a:hover {
+    color: #b5a48b; /* Благородный оттенок при наведении */
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* 5. НИЖНЯЯ ПОЛОСА */
+.footer-bottom-line {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 80px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+    color: #bbbbbb;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 30px;
+}
+
+.pay-icons {
+    display: flex;
+    gap: 15px;
+}
+@import url('https://googleapis.com');
+
+.art-hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    font-family: 'Inter', sans-serif;
+}
+
+/* МЯГКИЙ БЕЖЕВЫЙ ШАР (Glow эффект) */
+.hero-glow {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    /* Плавный переход цвета */
+    background: radial-gradient(circle, rgba(191, 134, 27, 0.7) 0%, rgba(242, 236, 228, 0) 70%);
+    top: 10%;
+    right: -5%;
+    z-index: 1;
+    filter: blur(30px);
+}
+
+/* ТИПОГРАФИКА (MA CHAISE) */
+.title-wrap {
+    position: relative;
+    z-index: 5;
+    left: -5%;
+}
+
+.title-solid {
+    font-family: 'Playfair Display', serif;
+    font-size: 18vw;
+    line-height: 0.8;
+    color: #1a1a1a;
+    letter-spacing: -0.8vw;
+    margin: 0;
+    font-weight: 900;
+}
+
+.title-outline {
+    font-family: 'Playfair Display', serif;
+    font-size: 18vw;
+    line-height: 0.8;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #1a1a1a;
+    letter-spacing: -0.8vw;
+    margin-top: -1vw; /* Наслоение строк */
+}
+
+/* ВЕРТИКАЛЬНЫЙ ТЕКСТ (Теперь он супер-четкий) */
+.side-label {
+    position: absolute;
+    left: -90px; /* Отступ от края букв */
+    top: 50%;
+    transform: rotate(-90deg);
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: #000000;
+    font-weight: 800; /* Максимально жирный */
+    text-transform: uppercase;
+}
+
+/* БЛОК С ТЕКСТОМ СПРАВА */
+.hero-overlay {
+    position: absolute;
+    right: 5%;
+    bottom: 22%;
+    z-index: 10;
+    max-width: 320px;
+}
+
+.chapter {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    border-left: 3px solid #1a1a1a; /* Стильный акцентный маркер */
+    padding-left: 12px;
+}
+
+.hero-text h2 {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-text p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* КНОПКА С ЛИНИЕЙ */
+.hero-cta a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.cta-line {
+    width: 50px;
+    height: 2px;
+    background: #1a1a1a;
+    margin-top: 12px;
+    transition: width 0.4s ease;
+}
+
+.hero-cta:hover .cta-line {
+    width: 100%;
+}
+
+/* ДЕКОР И ТЭГИ */
+.decor-line-v {
+    position: absolute;
+    left: 20%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba(0,0,0,0.06);
+    z-index: 1;
+}
+
+.tech-tag {
+    position: absolute;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #642b0a;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.top-right { top: 130px; right: 5%; }
+.bottom-left { bottom: 50px; left: 5%; }
+html {
+    scroll-behavior: smooth; /* Включает плавный скролл по всему сайту */
+}
+/* 3D СЦЕНА */
+.card-scene {
+    perspective: 1500px; /* Глубина 3D */
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    margin: 60px auto;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* Состояние переворота */
+.card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Скрывает заднюю сторону при перевороте */
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 2px; /* Почти острые углы для минимализма */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.03);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: #fdfdfd;
+}
+
+/* КОНТЕНТ ВНУТРИ */
+.card-content { text-align: left; width: 100%; }
+.card-content h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin: 20px 0; letter-spacing: 1px; }
+.card-content p { font-size: 13px; line-height: 1.8; color: #666; margin-bottom: 40px; }
+
+/* КНОПКИ ВАРИАНТОВ */
+.options-grid { display: grid; gap: 10px; margin-top: 30px; }
+.opt-btn {
+    background: none; border: 1px solid #eee; padding: 15px;
+    text-align: left; font-size: 11px; letter-spacing: 1px;
+    text-transform: uppercase; cursor: pointer; transition: 0.3s;
+}
+.opt-btn:hover { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+
+/* ПРОГРЕСС БАР */
+.quiz-progress { width: 100%; height: 1px; background: #eee; margin-bottom: 30px; }
+.progress-bar { width: 0%; height: 100%; background: #000; transition: 0.5s; }
+/* ОБНОВЛЕННЫЕ КНОПКИ ВАРИАНТОВ */
+.options-grid {
+    display: grid;
+    gap: 15px; /* Увеличили пространство */
+    margin-top: 40px;
+}
+
+.quiz-opt-btn {
+    position: relative;
+    text-align: left;
+    padding: 22px 30px 22px 60px; /* Оставили место слева под номер */
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #e0e0e0; /* Только нижняя линия для чистоты */
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+/* Декоративный номер варианта (A, B, C...) или точка */
+.quiz-opt-btn::before {
+    content: '→'; /* Можно заменить на точку или оставить стрелку */
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    opacity: 0.3;
+    transition: all 0.4s ease;
+}
+
+/* Эффект при наведении */
+.quiz-opt-btn:hover {
+    padding-left: 75px; /* Текст изящно отъезжает вправо */
+    color: #000;
+    background: #fcfcfc; /* Совсем легкий фон */
+}
+
+.quiz-opt-btn:hover::before {
+    opacity: 1;
+    left: 35px;
+    color: #8d7e6d; /* Твой акцентный бронзовый цвет */
+}
+
+/* Финальная линия под кнопкой, которая "оживает" */
+.quiz-opt-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: width 0.4s ease;
+}
+
+.quiz-opt-btn:hover::after {
+    width: 100%;
+}
+
+/* Кнопка "ПРОЙТИ ТЕСТ" тоже должна быть круче */
+.start-quiz-btn {
+    position: relative;
+    margin-top: 30px;
+    padding: 20px 50px;
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.start-quiz-btn:hover {
+    background: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+ .about-editorial {
+    padding: 120px 8%;
+    background: #fff;
+    color: #1a1a1a;
+}
+
+.editorial-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Текст слева, фото справа */
+    gap: 100px;
+}
+
+/* ЛЕВАЯ КОЛОНКА */
+.chapter-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #ccc;
+    display: block;
+    margin-bottom: 50px;
+}
+
+.nav-item {
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.nav-item .num { font-size: 11px; color: #aaa; display: block; margin-bottom: 10px; }
+.nav-item h3 { font-size: 20px; letter-spacing: 1px; margin-bottom: 10px; }
+.nav-item p { font-size: 13px; color: #888; line-height: 1.6; max-height: 0; overflow: hidden; transition: 0.4s; opacity: 0; }
+
+/* Активное состояние */
+.nav-item.active { border-bottom-color: #1a1a1a; }
+.nav-item.active p { max-height: 100px; opacity: 1; margin-top: 10px; }
+.nav-item.active h3 { color: #8d7e6d; }
+
+/* ГАЛЕРЕЯ СПРАВА */
+.editorial-gallery { position: relative; height: 600px; }
+
+.gallery-tab {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+}
+
+.gallery-tab.active { opacity: 1; visibility: visible; }
+
+.photo-main, .photo-side, .photo-mini {
+    background: #f7f7f7;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #bbb;
+    letter-spacing: 2px;
+}
+
+.photo-main { grid-row: span 2; height: 100%; }
+.photo-side { height: 290px; }
+.photo-mini { height: 290px; background: #f2ece4; }
+
+/* Задаем базовый глубокий цвет для всего экрана теста */
+.quiz-section {
+  
+    position: relative !important;
+    min-height: 100vh !important;
+    background: #ffffff !important; /* Чистый белый фон */
+    overflow: hidden !important;
+}
+
+
+/* Стили для холста анимации — он строго на фоне и не мешает кликать по карточкам */
+#quiz-dynamic-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Строго под вашими карточками */
+    pointer-events: none; /* Клик проходит насквозь к кнопкам теста */
+}
+
+/* Принудительно поднимаем ваш контейнер с карточками выше динамического фона */
+.quiz-container {
+    position: relative !important;
+    z-index: 2 !important;
+}
+ /* Настройка родительского контейнера подвала */
+#footer {
+    position: relative !important;
+    background: #ffffff !important; /* Базовый чистый белый холст */
+    overflow: hidden !important;
+}
+
+/* Холст для светового пятна */
+#footer-ambient-bg {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0 !important; /* Находится строго под текстом */
+    pointer-events: none !important; /* Клик проходит насквозь */
+}
+
+/* Приподнимаем контент футера над свечением */
+.footer-wrapper, .footer-bottom-line {
+    position: relative !important;
+    z-index: 2 !important;
+}
+ /* ==========================================
+   ФИНАЛЬНЫЙ ЧЕРНЫЙ ПОДВАЛ // MA CHAISE
+   ========================================== */
+
+/* 1. Основной фон футера — глубокий матовый черный */
+#footer {
+    position: relative !important;
+    background: #0d0d0d !important; 
+    padding: 70px 0 40px 0 !important;
+    overflow: hidden !important;
+}
+
+/* 2. Контрастная и читаемая типографика */
+.footer-left h2, 
+.footer-right h3, 
+.footer-bottom-line p {
+    color: #ffffff !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* Второстепенный текст делаем мягким серебристым, чтобы он не резал глаза */
+.footer-left span, 
+.footer-promo {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* 3. Изящное контурное слово PROVENCE на фоне */
+.site-footer {
+    position: relative;
+}
+/* Стилизация гигантских фоновых букв */
+#footer .bg-text, 
+#footer h1 {
+    color: transparent !important;
+    /* Тончайшая белая обводка букв, которая парит на черном фоне */
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 4. Аккуратная светлая разделительная линия */
+.footer-divider .line {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+.footer-divider .symbol {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* 5. Интерактивная форма подписки */
+.minimal-input {
+    border: none !important;
+    /* Тонкая белая линия под полем ввода почты */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    background: transparent !important;
+    padding: 10px 0 !important;
+    outline: none !important;
+    transition: border-color 0.3s ease !important;
+}
+
+/* При клике на инпут линия загорается фирменным золотом */
+.minimal-input:focus {
+    border-bottom-color: #bf861b !important;
+}
+
+/* Кнопка ОТПРАВИТЬ */
+.minimal-btn {
+    color: #ffffff !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: color 0.3s ease !important;
+}
+
+.minimal-btn:hover {
+    color: #bf861b !important; /* Подсветка золотом при наведении */
+}
+
+/* 6. Белые иконки соцсетей с золотым фокусом */
+.social-icons a svg {
+    stroke: rgba(255, 255, 255, 0.6) !important;
+    transition: all 0.3s ease !important;
+}
+
+.social-icons a:hover svg {
+    stroke: #bf861b !important; /* Иконка плавно становится золотой */
+    transform: translateY(-3px);
+}
+
+/* Иконки платежных систем в самом низу */
+.pay-icons {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+/* ==========================================
+   ГИГАНТСКИЙ РАЗМЕР И ШРИФТ ДЛЯ СЛОВА PROVENCE
+   ========================================== */
+
+#footer-bg-text {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    
+    /* Огромный размер букв в зависимости от ширины экрана */
+    font-size: 15vw !important; 
+    font-weight: 900 !important;
+    font-family: 'Playfair Display', 'Georgia', serif !important; /* Шрифт как на первом экране */
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    line-height: 0.8 !important;
+    
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 1 !important; /* Уводим на задний план */
+    pointer-events: none !important; /* Отключаем блокировку кликов */
+    user-select: none !important;
+}
+
+
+
+
+
+/* Базовый контейнер */
+.chez-catalog-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    background-color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* --- ВЕРХНЯЯ ТУЛБАР-ЛИНИЯ --- */
+.catalog-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+.toolbar-btn {
+    background: none;
+    border: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #111;
+    padding: 5px 0;
+}
+.products-counter {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+/* Контейнер выпадающего меню сортировки */
+.sort-dropdown-wrapper {
+    position: relative;
+}
+.sort-dropdown-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 240px;
+    background-color: #fff;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 10;
+    display: none; /* Скрыто по умолчанию */
+}
+/* Класс активности для открытия через JS */
+.sort-dropdown-list.open {
+    display: flex;
+}
+.sort-option {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.sort-option:hover, .sort-option.active {
+    background-color: #f9f9f9;
+    color: #111;
+}
+
+/* --- ВЫПАДАЮЩАЯ ПАНЕЛЬ С ФИЛЬТРАМИ --- */
+.filter-dropdown-panel {
+    background-color: #fff;
+    border-bottom: 1px solid #eeeeee;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease;
+    padding: 0;
+}
+/* Класс открытия для панели фильтров */
+.filter-dropdown-panel.open {
+    max-height: 500px;
+    padding: 30px 0;
+}
+.panel-inner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки под фильтры */
+    gap: 40px;
+}
+.column-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #111;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Инпуты цены */
+.price-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.price-inputs input {
+    width: 100%;
+    border: 1px solid #e2e2e2;
+    padding: 8px 12px;
+    font-size: 13px;
+    outline: none;
+}
+.line-sep { color: #ccc; }
+
+/* Чекбоксы списков категорий */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+}
+.custom-checkbox input {
+    cursor: pointer;
+}
+
+/* Нижние кнопки панели фильтрации */
+.panel-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+    border-top: 1px solid #f5f5f5;
+    padding-top: 20px;
+}
+.action-btn {
+    padding: 10px 24px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid #111;
+}
+.clear-btn { background: none; color: #111; }
+.apply-btn { background-color: #111; color: #fff; }
+
+/* --- СЕТКА ТОВАРОВ (ТОЧНО 3 В РЯД) --- */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px;
+    padding: 40px 0;
+}
+
+/* ДИЗАЙН КАРТОЧКИ ТОВАРА */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.img-container {
+    position: relative;
+    width: 100%;
+    padding-top: 115px; /* Пропорции прямоугольной подложки из референса */
+    background-color: #fcfcfc; /* Очень мягкий серый/белый тон */
+}
+.main-product-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Картинка стула вписывается идеально */
+    padding: 25px; /* Воздушные отступы вокруг стула */
+    transition: transform 0.5s ease;
+}
+.product-card:hover .main-product-img {
+    transform: scale(1.02);
+}
+
+/* Иконка "Лайк / Избранное" */
+.like-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #222;
+    cursor: pointer;
+    z-index: 2;
+}
+.like-button:hover {
+    color: #b08d57; /* Изящный золотистый/бронзовый цвет при наведении */
+}
+
+/* Описание под фотографией */
+.product-meta-info {
+    padding-top: 20px;
+}
+.product-name {
+    font-size: 13px;
+    font-weight: 400;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 8px 0;
+    line-height: 1.5;
+}
+.product-price {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    margin: 0;
+}
+
+/* Адаптивная верстка под экраны планшетов */
+@media (max-width: 992px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .panel-inner-grid { grid-template-columns: 1fr; gap: 20px; }
+}
