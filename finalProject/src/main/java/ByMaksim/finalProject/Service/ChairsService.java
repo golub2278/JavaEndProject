@@ -14,6 +14,10 @@ public class ChairsService
         this.cr = cr;
     }
 
+    public List<Chairs> getChairs() {
+        return cr.findAll();
+    }
+
     public Chairs getChairById(Long id) {
         return cr.findById(id).orElseThrow(() -> new RuntimeException("Стул не найдена"));
     }
