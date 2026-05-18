@@ -514,35 +514,108 @@
     "Model" : "Барный",
     "Description" : "Барный стул с круглой спинкой и сиденьем из фактурной ткани на деревянных ножках с металлическим кольцом.",
     "Price" : 249,
-    "Image_URL" : ""
+    "Image_URL" : "https://drive.google.com/file/d/1UqLETuL7pfSQwjFgMd-_fh4Nd4Ch0ejA/view?usp=drivesdk"
 },
 {
     "Id" : 67,
     "Model" : "Барный",
     "Description" : "Барный стул с цилиндрической спинкой и мягким сиденьем из светлой ткани на деревянном каркасе.",
     "Price" : 219,
-    "Image_URL" : ""
+    "Image_URL" : "https://drive.google.com/file/d/1SSoBe0K1HftCK5dzLBcdmtWDlp63mH-e/view?usp=drivesdk"
 },
 {
     "Id" : 68,
     "Model" : "Барный",
     "Description" : "Барный стул без спинки с круглым сиденьем из ткани с геометрическим узором на деревянном основании.",
     "Price" : 189,
-    "Image_URL" : ""
+    "Image_URL" : "https://drive.google.com/file/d/1wWEFErNTObr6CLNIlJWLotNVALeSx1Tj/view?usp=drivesdk"
 },
 {
     "Id" : 69,
     "Model" : "Барный",
     "Description" : "Барный стул с комбинированной обивкой сиденья и спинки из ткани на черных ножках с металлической подножкой.",
     "Price" : 199,
-    "Image_URL" : ""
+    "Image_URL" : "https://drive.google.com/file/d/1mFzVEuWVxGiqOGjE4f2Rz1P5n52A96gf/view?usp=drivesdk"
 },
 {
     "Id" : 70,
     "Model" : "Барный",
     "Description" : "Барный стул с горизонтальной спинкой и мягким ребристым сиденьем из велюра на металлическом каркасе.",
     "Price" : 279,
-    "Image_URL" : ""
+    "Image_URL" : "https://drive.google.com/file/d/1WNSZ4RKzlv2TPG7vtw41mFLioCIUmF3m/view?usp=drivesdk"
+}
+
+
+
+{
+    "Id" : 71,
+    "Model" : "Обеденный",
+    "Description" : "Обеденный стул с комбинированной обивкой спинки из ткани на деревянных ножках с металлическими наконечниками.",
+    "Price" : 189,
+    "Image_URL" : "https://drive.google.com/file/d/1PLRD_1I2OIYEhmr62eyOttan4z9uISOA/view?usp=drivesdk"
+},
+{
+    "Id" : 72,
+    "Model" : "Обеденный",
+    "Description" : "Обеденный стул с глянцевым деревянным каркасом и мягким сиденьем из экокожи.",
+    "Price" : 229,
+    "Image_URL" : "https://drive.google.com/file/d/11ZDbaKImiNbP3ybIuilGFwzRbkhevIFq/view?usp=drivesdk"
+},
+{
+    "Id" : 73,
+    "Model" : "Обеденный",
+    "Description" : "Обеденный стул с декоративной фигурной спинкой из дерева и мягким сиденьем из велюра.",
+    "Price" : 259,
+    "Image_URL" : "https://drive.google.com/file/d/16ISBOTWFsQuavZ9FwAUZ6uEPJizvWkmO/view?usp=drivesdk"
+},
+{
+    "Id" : 74,
+    "Model" : "Обеденный",
+    "Description" : "Обеденный стул с изогнутым деревянным подлокотником и сиденьем из фактурной ткани.",
+    "Price" : 219,
+    "Image_URL" : "https://drive.google.com/file/d/10llXYbnjOgwu0IUsA2x7WkR7zpQ3QIyJ/view?usp=drivesdk"
+},
+{
+    "Id" : 75,
+    "Model" : "Обеденный",
+    "Description" : "Обеденный стул с деревянным каркасом и мягкой обивкой из экокожи.",
+    "Price" : 249,
+    "Image_URL" : "https://drive.google.com/file/d/1gUmR29f0aPUC-psv4tMrniZEBRk4WaVZ/view?usp=drivesdk"
+}
+{
+    "Id" : 76,
+    "Model" : "Обеденный",
+    "Description" : "Обеденный стул с фигурной спинкой с вырезом и мягкой обивкой из велюра на деревянных ножках.",
+    "Price" : 199,
+    "Image_URL" : "https://drive.google.com/file/d/14l_YflcqDJLtuE5OLJYMWDA9eX71-Qq_/view?usp=drivesdk"
+},
+{
+    "Id" : 77,
+    "Model" : "Обеденный",
+    "Description" : "Обеденный стул с обтекаемой спинкой и комбинированной обивкой на тонких деревянных ножках.",
+    "Price" : 229,
+    "Image_URL" : "https://drive.google.com/file/d/1g0VouHpUVBRS1bBLgZA-PZUu1fiv3az4/view?usp=drivesdk"
+},
+{
+    "Id" : 78,
+    "Model" : "Обеденный",
+    "Description" : "Обеденный стул с подлокотниками и обивкой из ткани с геометрическим узором на деревянном каркасе.",
+    "Price" : 269,
+    "Image_URL" : "https://drive.google.com/file/d/1QM7X4qVw7rpMh7OHqV78LgeSgK8irr_6/view?usp=drivesdk"
+},
+{
+    "Id" : 79,
+    "Model" : "Обеденный",
+    "Description" : "Обеденный стул с высокой спинкой и мягкой обивкой из экокожи на деревянных ножках.",
+    "Price" : 239,
+    "Image_URL" : "https://drive.google.com/file/d/1u5s_8d3BzInH1fuq22w3TKe57M_q_H3X/view?usp=drivesdk"
+},
+{
+    "Id" : 80,
+    "Model" : "Обеденный",
+    "Description" : "Обеденный стул с круглой спинкой и мягким сиденьем из ткани на массивных деревянных ножках.",
+    "Price" : 189,
+    "Image_URL" : "https://drive.google.com/file/d/1CEOI4Nu0Tw8fCECrejdSW2cU7E-t4YJI/view?usp=drivesdk"
 }
 
 
