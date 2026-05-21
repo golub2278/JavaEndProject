@@ -1,628 +1,592 @@
 [
-	{
-		"Id" : 1,
-		"Model" : "Бескаркасное",
-		"Description" : "Бескаркасное кресло из искусственного меха.",
-		"Price" : 229,
-		"Image_URL" : "https://drive.google.com/file/d/1AYobs5Eef4wQvDcQGAlCVa_O0x-rkupZ/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 2,
-		"Model" : "Бескаркасное",
-		"Description" : "Кресло-мешок с мягкой велюровой обивкой.",
-		"Price" : 109,
-		"Image_URL" : "https://drive.google.com/file/d/1Pfhk0siMFx0_OUn5fPtk5yp84QVQxvL4/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 3,
-		"Model" : "Бескаркасное",
-		"Description" : "Бескаркасное кресло из тёмно-серого велюра.",
-		"Price" : 239,
-		"Image_URL" : "https://drive.google.com/file/d/1bj5yyWMTrON79gUuwQ-Cs0mFYxICwFtM/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 4,
-		"Model" : "Бескаркасное",
-		"Description" : "Тёмно-серое напольное кресло с эргономичной формой из экокожи и велюра.",
-		"Price" : 299,
-		"Image_URL" : "https://drive.google.com/file/d/1WjU74iZxf9BTir0nMu9RXig8mFJKLF2x/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 5,
-		"Model" : "Бескаркасное",
-		"Description" : "Бескаркасное кресло из искусственной замши регулируемой спинкой. ",
-		"Price" : 229,
-		"Image_URL" : "https://drive.google.com/file/d/1kizlCslvku6hCEXcfkZTONvSb8iFY_rB/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 6,
-		"Model" : "Бескаркасное",
-		"Description" : "Напольное кресло с вертикальной каналной прострочкой из мягкого бархата с эргономичной формой спинки.",
-		"Price" : 209,
-		"Image_URL" : "https://drive.google.com/file/d/1ZdwaN_ilyu34fyYkkHYSDbWcFvZ2XeyB/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 7,
-		"Model" : "Бескаркасное",
-		"Description" : "Напольное кресло-мешок округлой формы из искусственного меха с длинным ворсом и мягкой плюшевой основы.",
-		"Price" : 139,
-		"Image_URL" : "https://drive.google.com/file/d/10meOJmK4qsnpHGWlhLtjMdV-mRFfQXUG/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 8,
-		"Model" : "Бескаркасное",
-		"Description" : "Напольное кресло из фактурного вельвета с высокой спинкой и глубоким мягким сиденьем.",
-		"Price" : 109,
-		"Image_URL" : "https://drive.google.com/file/d/151VTR5Ld2_aj5BEY5V1Ihtv30loNfO53/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 9,
-		"Model" : "Бескаркасное",
-		"Description" : "Напольное кресло-мешок эргономичной формы из мягкой экокожи с высокой спинкой.",
-		"Price" : 159,
-		"Image_URL" : "https://drive.google.com/file/d/1Lg0N6cq8kFHOgfMLgfCDMVQegfsZifsz/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 10,
-		"Model" : "Бескаркасное",
-		"Description" : "Напольное кресло-мешок из фактурного вельвета с рубчатой текстурой и эргономичной формой.",
-		"Price" : 99,
-		"Image_URL" : "https://drive.google.com/file/d/1DXjVqB1sIwiNCndXnRI38whfYUz4skg8/view?usp=drivesdk"
-	},
-
-
-	
-
-	
-	{
-		"Id" : 11,
-		"Model" : "Геймерское",
-		"Description" : "Игровое кресло с высокой спинкой из велюра с ромбовидной прострочкой, подголовником, поясничной подушкой и подлокотниками на колёсной базе.",
-		"Price" : 399,
-		"Image_URL" : "https://drive.google.com/file/d/1AXH0noU5nAAHEko5Lv_M41k27Bn4GATc/view?usp=drivesdk"
-	},
-
-{
-		"Id" : 12,
-		"Model" : "Геймерское",
-		"Description" : "Кресло на колёсной базе с эргономичной формой спинки гоночного типа из экокожи и ткани.",
-		"Price" : 349,
-		"Image_URL" : "https://drive.google.com/file/d/162S4FfPgg7mVCQAlKW8U3wNbeIilKX4M/view?usp=drivesdk"
-	},
-
-{
-		"Id" : 13,
-		"Model" : "Геймерское",
-		"Description" : "Игровое кресло с эргономичной высокой спинкой из велюра с подголовником и поясничной подушкой на колёсном основании.",
-		"Price" : 439,
-		"Image_URL" : "https://drive.google.com/file/d/1I7iCk1iqRqcD79srMJfhOJiA7b3w2yGy/view?usp=drivesdk"
-	},
-
-{
-		"Id" : 14,
-		"Model" : "Геймерское",
-		"Description" : "Игровое кресло с эргономичной высокой спинкой из экокожи и ткани с подголовником, поясничной подушкой и регулируемыми подлокотниками на колёсной базе.",
-		"Price" : 499,
-		"Image_URL" : "https://drive.google.com/file/d/1FsEwT-zZj2_wP77Ui2MRwQm7ffmOpftv/view?usp=drivesdk"
-	},
-
-{
-		"Id" : 15,
-		"Model" : "Геймерское",
-		"Description" : "Игровое кресло из экокожи с ромбовидной прострочкой, подголовником, подлокотниками и выдвижной подставкой для ног на колёсной базе.",
-		"Price" : 539,
-		"Image_URL" : "https://drive.google.com/file/d/1e9jD8WLEyCkkVyVyUXsi-j-ylIgSVitF/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 16,
-		"Model" : "Геймерское",
-		"Description" : "Игровое кресло из экокожи с высокой спинкой, подголовником, поясничной подушкой и подлокотниками на колёсной базе.",
-		"Price" : 299,
-		"Image_URL" : "https://drive.google.com/file/d/1XoGZtEpPyupWMlGcKy26QMIfmsMgZD-l/view?usp=drivesdk"
-	},
-
-{
-		"Id" : 17,
-		"Model" : "Геймерское",
-		"Description" : "Игровое кресло с высокой спинкой гоночного типа и регулируемыми подлокотниками из экокожи на колёсной базе.",
-		"Price" : 999,
-		"Image_URL" : "https://drive.google.com/file/d/1lgFLhorClcSedlh3iCEMHj9eMqq-ZjCM/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 18,
-		"Model" : "Геймерское",
-		"Description" : "Игровое кресло из экокожи с ромбовидной прострочкой, подголовником, поясничной подушкой и выдвижной подставкой для ног на колёсной базе.",
-		"Price" : 399,
-		"Image_URL" : "https://drive.google.com/file/d/1Mv-c9wIto5pHjIxJu7rQD-vRGllkRm6G/view?usp=drivesdk"
-	},
-
-{
-		"Id" : 19,
-		"Model" : "Геймерское",
-		"Description" : "Игровое кресло с эргономичной высокой спинкой из экокожи с регулируемыми подлокотниками на колёсной базе.",
-		"Price" : 999,
-		"Image_URL" : "https://drive.google.com/file/d/1c5Lmv-EruPF9iCPp9vR1WfgKKJs3HK64/view?usp=drivesdk"
-	},
-
-{
-		"Id" : 20,
-		"Model" : "Геймерское",
-		"Description" : "Игровое кресло гоночного типа из экокожи с высокой спинкой, подголовником, поясничной подушкой, регулируемыми подлокотниками и выдвижной подставкой для ног на колёсной базе.",
-		"Price" : 399,
-		"Image_URL" : "https://drive.google.com/file/d/1IKAuD0YY_lKbmSXpgjvvo6wRsfNx9XaN/view?usp=drivesdk"
-	},
+		 {
+        "Id": 1,
+        "Model": "Бескаркасное",
+        "Description": "Светло-зеленое бескаркасное кресло округлой формы из велюровой ткани с мягкими бортиками.",
+        "Price": 189,
+        "Image_URL": ""
+    },
+    {
+        "Id": 2,
+        "Model": "Бескаркасное",
+        "Description": "Комплект из розового бескаркасного кресла и пуфика из мягкой велюровой ткани.",
+        "Price": 279,
+        "Image_URL": ""
+    },
+    {
+        "Id": 3,
+        "Model": "Бескаркасное",
+        "Description": "Серое бескаркасное кресло с обивкой из длинноворсового искусственного меха.",
+        "Price": 229,
+        "Image_URL": ""
+    },
+    {
+        "Id": 4,
+        "Model": "Бескаркасное",
+        "Description": "Коричневое бескаркасное кресло-груша из экокожи с декоративными швами.",
+        "Price": 149,
+        "Image_URL": ""
+    },
+    {
+        "Id": 5,
+        "Model": "Бескаркасное",
+        "Description": "Черное бескаркасное кресло из плотного вельвета с вертикальным рубчиком.",
+        "Price": 209,
+        "Image_URL": ""
+    }
+    {
+        "Id": 6,
+        "Model": "Бескаркасное",
+        "Description": "Черное бескаркасное кресло с вертикальной канальной прострочкой из фактурного велюра.",
+        "Price": 299,
+        "Image_URL": ""
+    },
+    {
+        "Id": 7,
+        "Model": "Бескаркасное",
+        "Description": "Темно-коричневое напольное кресло из мягкой ткани с сегментированной спинкой.",
+        "Price": 269,
+        "Image_URL": ""
+    },
+    {
+        "Id": 8,
+        "Model": "Бескаркасное",
+        "Description": "Серое бескаркасное кресло-сумка из плотной ткани с декоративным ремнем и пряжкой.",
+        "Price": 199,
+        "Image_URL": ""
+    },
+    {
+        "Id": 9,
+        "Model": "Бескаркасное",
+        "Description": "Темно-серое кресло со складчатой спинкой и основанием из комбинированных материалов.",
+        "Price": 249,
+        "Image_URL": ""
+    },
+    {
+        "Id": 10,
+        "Model": "Бескаркасное",
+        "Description": "Черное бескаркасное кресло круглой формы с обивкой из густого искусственного меха.",
+        "Price": 239,
+        "Image_URL": ""
+    }
 
 
 
 
-
-{
-		"Id" : 21,
-		"Model" : "Для питомцев",
-		"Description" : "Прямоугольное кресло с высокими бортиками из мягкого велюра с пятнистым принтом.",
-		"Price" : 69,
-		"Image_URL" : "https://drive.google.com/file/d/18IXm2zZ-nw3cim0d1xDomweSy4PvMX3D/view?usp=drivesdk"
-	},
-
-{
-		"Id" : 22,
-		"Model" : "Для питомцев",
-		"Description" : "Диван-кресло на деревянных ножках с декоративными пуговицами из мебельного велюра.",
-		"Price" : 139,
-		"Image_URL" : "https://drive.google.com/file/d/1K72IVH2KY7bbvhpI0uishZ1b2hfmZ9_b/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 23,
-		"Model" : "Для питомцев",
-		"Description" : "Прямоугольное кресло с низкими бортиками из плюшевой ткани с мягким наполнителем.",
-		"Price" : 59,
-		"Image_URL" : "https://drive.google.com/file/d/1G1F6katp7LHSgqsmsFQnp5TfDBAQ7d-l/view?usp=drivesdk"
-	},
-	
-{
-		"Id" : 24,
-		"Model" : "Для питомцев",
-		"Description" : "Квадратное кресло с контрастной окантовкой из полиэстера со съемным чехлом.",
-		"Price" : 89,
-		"Image_URL" : "https://drive.google.com/file/d/1i1P5q29Mow-XH2f7jeONbNvg3XyGBGGu/view?usp=drivesdk"
-	},
-
-	{
-		"Id" : 25,
-		"Model" : "Для питомцев",
-		"Description" : "Прямоугольное кресло с бортиками из мягкого велюра с принтом под шкуру животного.",
-		"Price" : 69,
-		"Image_URL" : "https://drive.google.com/file/d/1eLNVTMOwlVfmXNRPc_XgH0ftE4MLw2Ap/view?usp=drive_link"
-	},
-
-	{
-		"Id" : 26,
-		"Model" : "Для питомцев",
-		"Description" : "Овальное кресло-диван с фигурной спинкой и деревянными ножками из экокожи.",
-		"Price" : 89,
-		"Image_URL" : "https://drive.google.com/file/d/1o_mWhIHwsfExvxBg-yBL4P4Cj2aRk_38/view?usp=drive_link"
-	},
-
-	{
-		"Id" : 27,
-		"Model" : "Для питомцев",
-		"Description" : "Круглый диван с декоративной отделкой заклепками и мягкими подушками из велюра.",
-		"Price" : 159,
-		"Image_URL" : "https://drive.google.com/file/d/1QoMlAqB8IBj0hbzXT3fH8yM7C7auQr5C/view?usp=drive_link"
-	},
-
-	{
-		"Id" : 28,
-		"Model" : "Для питомцев",
-		"Description" : "Круглая лежанка с низкими бортиками из полосатой ткани.",
-		"Price" : 69,
-		"Image_URL" : "https://drive.google.com/file/d/1PogomeTieHYZ5uCqI4pK1ADBp8LNTRRw/view?usp=drive_link"
-	},
-
-	{
-		"Id" : 29,
-		"Model" : "Для питомцев",
-		"Description" : "Фигурная лежанка с резным деревянным каркасом и плетеными элементами.",
-		"Price" : 189,
-		"Image_URL" : "https://drive.google.com/file/d/1a_5efSi2F5ScWIjCaMKIlwN6rZpr4Jmo/view?usp=drive_link"
-	},
-
-{
-		"Id" : 30,
-		"Model" : "Для питомцев",
-		"Description" : "Прямоугольная лежанка с высокими мягкими бортиками из вельвета.",
-		"Price" : 89,
-		"Image_URL" : "https://drive.google.com/file/d/1oIqzrHKG5tgYiu-HjRmkFayizkNvzDX4/view?usp=drive_link"
-	},
+    {
+        "Id": 11,
+        "Model": "Геймерское",
+        "Description": "Светло-серое геймерское кресло с черными боковыми вставками, подголовником и поясничной подушкой из ткани.",
+        "Price": 349,
+        "Image_URL": ""
+    },
+    {
+        "Id": 12,
+        "Model": "Геймерское",
+        "Description": "Коричневое геймерское кресло из экокожи с ромбовидной прострочкой и выдвижной подставкой для ног.",
+        "Price": 399,
+        "Image_URL": ""
+    },
+    {
+        "Id": 13,
+        "Model": "Геймерское",
+        "Description": "Черное геймерское кресло из гладкой экокожи с логотипом на спинке и регулируемыми подлокотниками.",
+        "Price": 489,
+        "Image_URL": ""
+    },
+    {
+        "Id": 14,
+        "Model": "Геймерское",
+        "Description": "Серое геймерское кресло с черными вставками, подголовником и выдвижной оттоманкой из комбинированных материалов.",
+        "Price": 329,
+        "Image_URL": ""
+    },
+    {
+        "Id": 15,
+        "Model": "Геймерское",
+        "Description": "Черное геймерское кресло с красными текстильными вставками на спинке и сиденье из экокожи.",
+        "Price": 289,
+        "Image_URL": ""
+    }
+    {
+        "Id": 16,
+        "Model": "Геймерское",
+        "Description": "Светло-бежевое геймерское кресло с ромбовидной прострочкой на спинке и выдвижной подставкой для ног.",
+        "Price": 319,
+        "Image_URL": ""
+    },
+    {
+        "Id": 17,
+        "Model": "Геймерское",
+        "Description": "Черно-белое геймерское кресло с высоким изголовьем и графическим принтом серого цвета на спинке.",
+        "Price": 379,
+        "Image_URL": ""
+    },
+    {
+        "Id": 18,
+        "Model": "Геймерское",
+        "Description": "Черно-серое геймерское кресло из экокожи с горизонтальными валиками в зоне спины и подголовником.",
+        "Price": 299,
+        "Image_URL": ""
+    },
+    {
+        "Id": 19,
+        "Model": "Геймерское",
+        "Description": "Белое геймерское кресло из экокожи с ромбовидным узором и хромированной крестовиной.",
+        "Price": 359,
+        "Image_URL": ""
+    },
+    {
+        "Id": 20,
+        "Model": "Геймерское",
+        "Description": "Бело-черное геймерское кресло с вырезами в верхней части спинки и надписями на подушках.",
+        "Price": 339,
+        "Image_URL": ""
+    }
 
 
 
 
-
-	
-	
-{
-    "Id" : 31,
-    "Model" : "Каркасное",
-    "Description" : "Круглое каркасное кресло с деревянным каркасом и мягкой обивкой из велюра.",
-    "Price" : 189,
-    "Image_URL" : "https://drive.google.com/file/d/1KNqE8T7HEu3l96kOEOXH7z8kFYQnkF2o/view?usp=drive_link"
-},
-{
-    "Id" : 32,
-    "Model" : "Каркасное",
-    "Description" : "Кресло с высокой спинкой и изогнутыми ножками с декоративными элементами из велюра.",
-    "Price" : 249,
-    "Image_URL" : "https://drive.google.com/file/d/176Y_3jZm7v_uqwN6hutRKDup5hdy8ag9/view?usp=drive_link"
-},
-{
-    "Id" : 33,
-    "Model" : "Каркасное",
-    "Description" : "Круглое поворотное кресло с цельной основой и фактурной тканевой обивкой.",
-    "Price" : 299,
-    "Image_URL" : "https://drive.google.com/file/d/1K1fb0eQTu1yK6b1R_Aa4k64L61jlU7QM/view?usp=drive_link"
-},
-{
-    "Id" : 34,
-    "Model" : "Каркасное",
-    "Description" : "Кресло с деревянным каркасом и мягкими подушками из рогожки.",
-    "Price" : 219,
-    "Image_URL" : "https://drive.google.com/file/d/1upk8bC2P4HxorrIqP7KXxrrjFTPHhEHL/view?usp=drive_link"
-},
-{
-    "Id" : 35,
-    "Model" : "Каркасное",
-    "Description" : "Кресло с высокой спинкой и деревянными ножками из экокожи.",
-    "Price" : 329,
-    "Image_URL" : "https://drive.google.com/file/d/1upk8bC2P4HxorrIqP7KXxrrjFTPHhEHL/view?usp=drive_link"
-}
-{
-    "Id" : 36,
-    "Model" : "Каркасное",
-    "Description" : "Каркасное кресло с изогнутой спинкой и деревянным каркасом обитое плотной тканью.",
-    "Price" : 269,
-    "Image_URL" : "https://drive.google.com/file/d/1pCofai35PstsLdvUoU93_4ta0P_7f4CF/view?usp=drive_link"
-},
-{
-    "Id" : 37,
-    "Model" : "Каркасное",
-    "Description" : "Круглое каркасное кресло с отдельным пуфом и декоративными подушками из велюра.",
-    "Price" : 549,
-    "Image_URL" : "https://drive.google.com/file/d/1Md8wTpZ7HhgL1_Tyy7ujVrGcqm97hNiH/view?usp=drive_link"
-},
-{
-    "Id" : 38,
-    "Model" : "Каркасное",
-    "Description" : "Каркасное кресло с пуфом на конических ножках обитое гладким материалом под кожу.",
-    "Price" : 429,
-    "Image_URL" : "https://drive.google.com/file/d/1PKaDmnGTqB8TRBHPR3p7RM_l4MgQep1b/view?usp=drive_link"
-},
-{
-    "Id" : 39,
-    "Model" : "Каркасное",
-    "Description" : "Каркасное кресло прямой формы с вертикальными линиями и низким основанием из мебельной ткани.",
-    "Price" : 229,
-    "Image_URL" : "https://drive.google.com/file/d/1_SPDxW7Dj_YMIvc4bfULEnWmXY0ivnPm/view?usp=drive_link"
-},
-{
-    "Id" : 40,
-    "Model" : "Каркасное",
-    "Description" : "Каркасное кресло с деревянными подлокотниками и плетеными боковинами из ротанга.",
-    "Price" : 349,
-    "Image_URL" : "https://drive.google.com/file/d/1ZjOz6s1_nppHK6ZMJsrzFNRD0-pZn_VT/view?usp=drive_link"
-}
+    {
+        "Id": 21,
+        "Model": "Для питомца",
+        "Description": "Белая лежанка-кресло с черным крапчатым принтом и мягкими бортиками.",
+        "Price": 69,
+        "Image_URL": ""
+    },
+    {
+        "Id": 22,
+        "Model": "Для питомца",
+        "Description": "Серое кресло-диван на черных ножках с обивкой из велюра и декоративными пуговицами.",
+        "Price": 89,
+        "Image_URL": ""
+    },
+    {
+        "Id": 23,
+        "Model": "Для питомца",
+        "Description": "Светло-бежевое мягкое кресло для питомца из плюшевого материала с заниженной передней стенкой.",
+        "Price": 59,
+        "Image_URL": ""
+    },
+    {
+        "Id": 24,
+        "Model": "Для питомца",
+        "Description": "Круглое кресло цвета беж с декоративными заклепками и подушками в форме кости и с леопардовым принтом.",
+        "Price": 119,
+        "Image_URL": ""
+    },
+    {
+        "Id": 25,
+        "Model": "Для питомца",
+        "Description": "Коричневое кресло-софа из ребристого вельвета с мягкой подушкой внутри.",
+        "Price": 79,
+        "Image_URL": ""
+    }
+    {
+        "Id": 26,
+        "Model": "Для питомца",
+        "Description": "Круглая лежанка с вертикальной черно-бежевой полоской и контрастной окантовкой.",
+        "Price": 49,
+        "Image_URL": ""
+    },
+    {
+        "Id": 27,
+        "Model": "Для питомца",
+        "Description": "Квадратная черная лежанка с белой окантовкой по периметру и мягкой стеганой подушкой.",
+        "Price": 59,
+        "Image_URL": ""
+    },
+    {
+        "Id": 28,
+        "Model": "Для питомца",
+        "Description": "Прямоугольная лежанка с принтом под шкуру животного (коричневые пятна на белом фоне).",
+        "Price": 69,
+        "Image_URL": ""
+    },
+    {
+        "Id": 29,
+        "Model": "Для питомца",
+        "Description": "Черный каркасный диван для питомца с плетеными элементами и фигурными ножками.",
+        "Price": 139,
+        "Image_URL": ""
+    },
+    {
+        "Id": 30,
+        "Model": "Для питомца",
+        "Description": "Черный диван-шезлонг для питомца с обивкой под кожу, каретной стяжкой и деревянными ножками.",
+        "Price": 129,
+        "Image_URL": ""
+    }
 
 
 
-{
-    "Id" : 41,
-    "Model" : "Компьютерное кресло",
-    "Description" : "Компьютерное кресло с высокой спинкой и декоративной стяжкой на металлической поворотной базе.",
-    "Price" : 359,
-    "Image_URL" : "https://drive.google.com/file/d/1imDlo2Vgr4u4nMAhobgGpte5FnByt--r/view?usp=drive_link"
-},
-{
-    "Id" : 42,
-    "Model" : "Компьютерное кресло",
-    "Description" : "Компьютерное кресло с мягкими сегментированными подушками и хромированными подлокотниками на колесиках.",
-    "Price" : 429,
-    "Image_URL" : "https://drive.google.com/file/d/1ZI1cCEHGz_JT5jj5yMWa-uIdcnnkpxSD/view?usp=drive_link"
-},
-{
-    "Id" : 43,
-    "Model" : "Компьютерное кресло",
-    "Description" : "Компьютерное кресло с высокой спинкой и ромбовидной простежкой из велюра на хромированной опоре.",
-    "Price" : 289,
-    "Image_URL" : "https://drive.google.com/file/d/11G1k3TQlw5H8dJMvQmIssI0sp5_EZz-8/view?usp=drive_link"
-},
-{
-    "Id" : 44,
-    "Model" : "Компьютерное кресло",
-    "Description" : "Компьютерное кресло округлой формы из экокожи на металлической крестовине с роликами.",
-    "Price" : 239,
-    "Image_URL" : "https://drive.google.com/file/d/1T-q6m0IaexwLC6oP3H8JdTCjElcWoovS/view?usp=drive_link"
-},
-{
-    "Id" : 45,
-    "Model" : "Компьютерное кресло",
-    "Description" : "Компьютерное кресло с высокой спинкой и металлическими подлокотниками на пятилучевой базе.",
-    "Price" : 489,
-    "Image_URL" : "https://drive.google.com/file/d/1armJ5CsSwcgixcwBUCv1r8EuHlCBrWvQ/view?usp=drive_link"
-}
-	{
-    "Id" : 46,
-    "Model" : "Компьютерное кресло",
-    "Description" : "Велюровое кресло с обтекаемой спинкой на хромированной крестовине с колесиками.",
-    "Price" : 269,
-    "Image_URL" : "https://drive.google.com/file/d/12wSMaBymGR3kKQs6HF5DssKMCntaUXqG/view?usp=drive_link"
-},
-{
-    "Id" : 47,
-    "Model" : "Компьютерное кресло",
-    "Description" : "Офисное кресло с сетчатой спинкой и цельными подлокотниками на пластиковой базе.",
-    "Price" : 159,
-    "Image_URL" : "https://drive.google.com/file/d/1IVkPS9NSnT-qmd11xVvMRc36dCozCP2R/view?usp=drive_link"
-},
-{
-    "Id" : 48,
-    "Model" : "Компьютерное кресло",
-    "Description" : "Кресло с высокой спинкой из экокожи с хромированными подлокотниками.",
-    "Price" : 389,
-    "Image_URL" : "https://drive.google.com/file/d/1B-f4S3wuCg8xD6dIkXkawCVchm89CRCc/view?usp=drive_link"
-},
-{
-    "Id" : 49,
-    "Model" : "Компьютерное кресло",
-    "Description" : "Поворотное кресло из экокожи с вертикальной простежкой на металлической опоре.",
-    "Price" : 219,
-    "Image_URL" : "https://drive.google.com/file/d/1ooUH1sm_EBvZxxxh7PEYo6d9nIytgPBa/view?usp=drive_link"
-},
-{
-    "Id" : 50,
-    "Model" : "Компьютерное кресло",
-    "Description" : "Эргономичное кресло с высокой спинкой и регулируемыми подлокотниками из экокожи.",
-    "Price" : 329,
-    "Image_URL" : "https://drive.google.com/file/d/1iRZOQSzUSwH8uya5ARd9ZCpY4OF17o-f/view?usp=drive_link"
-}
+    {
+        "Id": 31,
+        "Model": "Каркасное",
+        "Description": "Комплект из темно-серого поворотного кресла и пуфа из фактурной ткани на металлических ножках.",
+        "Price": 459,
+        "Image_URL": ""
+    },
+    {
+        "Id": 32,
+        "Model": "Каркасное",
+        "Description": "Светло-бежевое кресло с изогнутой спинкой и каркасом из темного дерева.",
+        "Price": 389,
+        "Image_URL": ""
+    },
+    {
+        "Id": 33,
+        "Model": "Каркасное",
+        "Description": "Кресло восьмиугольной формы со светлой тканевой обивкой и вертикальными панелями на черном основании.",
+        "Price": 419,
+        "Image_URL": ""
+    },
+    {
+        "Id": 34,
+        "Model": "Каркасное",
+        "Description": "Современное кресло со светлой кожаной спинкой и сиденьем с абстрактным принтом на темных ножках.",
+        "Price": 499,
+        "Image_URL": ""
+    },
+    {
+        "Id": 35,
+        "Model": "Каркасное",
+        "Description": "Черное кожаное кресло с высокой спинкой и подлокотниками на деревянных ножках.",
+        "Price": 529,
+        "Image_URL": ""
+    }
+[
+    {
+        "Id": 36,
+        "Model": "Каркасное",
+        "Description": "Серое каркасное кресло с фактурной тканевой обивкой и массивным черным деревянным каркасом.",
+        "Price": 399,
+        "Image_URL": ""
+    },
+    {
+        "Id": 37,
+        "Model": "Каркасное",
+        "Description": "Светлое кресло на деревянных ножках с плетеными боковинами из ротанга и подушкой с пуговицами.",
+        "Price": 449,
+        "Image_URL": ""
+    },
+    {
+        "Id": 38,
+        "Model": "Каркасное",
+        "Description": "Черное кожаное кресло с округлой спинкой в комплекте с пуфом на темных ножках.",
+        "Price": 569,
+        "Image_URL": ""
+    },
+    {
+        "Id": 39,
+        "Model": "Каркасное",
+        "Description": "Круглое кресло из белой ткани букле на поворотной базе с подушкой с золотистым узором.",
+        "Price": 429,
+        "Image_URL": ""
+    },
+    {
+        "Id": 40,
+        "Model": "Каркасное",
+        "Description": "Коричневое кресло с обивкой из велюра и гнутым деревянным каркасом темного оттенка.",
+        "Price": 489,
+        "Image_URL": ""
+    }
 
-
-
-
-{
-    "Id" : 51,
-    "Model" : "Кресло-качалка",
-    "Description" : "Кресло-качалка с изогнутым деревянным каркасом и мягкой текстильной обивкой.",
-    "Price" : 349,
-    "Image_URL" : "https://drive.google.com/file/d/1nbQdtRXKLnKGzNt8hCM0ZMdBBPTlqb4y/view?usp=drive_link"
-},
-{
-    "Id" : 52,
-    "Model" : "Кресло-качалка",
-    "Description" : "Кресло-качалка с деревянным каркасом и ребристой обивкой из экокожи.",
-    "Price" : 279,
-    "Image_URL" : "https://drive.google.com/file/d/1hMQdUid4moURgbBIk64qMdzxfh-mVHig/view?usp=drive_link"
-},
-{
-    "Id" : 53,
-    "Model" : "Кресло-качалка",
-    "Description" : "Низкое кресло-качалка с дугообразным основанием и мягким матрасом из ткани.",
-    "Price" : 219,
-    "Image_URL" : "https://drive.google.com/file/d/1Z5poFTWqFes414OtOpCHrKGHGixzDV48/view?usp=drive_link"
-},
-{
-    "Id" : 54,
-    "Model" : "Кресло-качалка",
-    "Description" : "Кресло-качалка с плетеным каркасом и объемной мягкой подушкой.",
-    "Price" : 289,
-    "Image_URL" : "https://drive.google.com/file/d/1jN9JNP2KO8mp_s2dsx4O2RHnzIErHh5V/view?usp=drive_link"
-},
-{
-    "Id" : 55,
-    "Model" : "Кресло-качалка",
-    "Description" : "Кресло-качалка с фигурным деревянным основанием и фактурной тканевой обивкой.",
-    "Price" : 419,
-    "Image_URL" : "https://drive.google.com/file/d/12ejlO3lAzGxvijjPtU-3_cT71yd6sd7P/view?usp=drive_link"
-}
-{
-    "Id" : 56,
-    "Model" : "Кресло-качалка",
-    "Description" : "Кресло-качалка с хромированным металлическим каркасом и сегментированной обивкой, в комплекте с подставкой для ног.",
-    "Price" : 549,
-    "Image_URL" : "https://drive.google.com/file/d/1FN2YYeM_vdQK3gqluUajQsnW2QWEbDNw/view?usp=drive_link"
-},
-{
-    "Id" : 57,
-    "Model" : "Кресло-качалка",
-    "Description" : "Кресло-качалка с деревянным каркасом и подлокотниками, оснащенное мягкими текстильными подушками.",
-    "Price" : 399,
-    "Image_URL" : "https://drive.google.com/file/d/1eVBBBRT6DVMMFhwyqG-XTf4iVOZFqbzA/view?usp=drive_link"
-},
-{-+
-    "Id" : 58,
-    "Model" : "Кресло-качалка",
-    "Description" : "Кресло-качалка с плетеным веревочным сиденьем и спинкой на деревянных полозьях.",
-    "Price" : 329,
-    "Image_URL" : "https://drive.google.com/file/d/1k9mjg40U8i8J0k66nWPgJvxazVpkZyBM/view?usp=drive_link"
-},
-{
-    "Id" : 59,
-    "Model" : "Кресло-качалка",
-    "Description" : "Кресло-качалка из металлического прута с радиальной конструкцией спинки и сиденья.",
-    "Price" : 249,
-    "Image_URL" : "https://drive.google.com/file/d/1Z5ZeseenjUXp0qv63KCnEjlEkeFBvgkY/view?usp=drive_link"
-},
-{
-    "Id" : 60,
-    "Model" : "Кресло-качалка",
-    "Description" : "Кресло-качалка с изогнутым деревянным основанием и мягкой обивкой из плотной ткани.",
-    "Price" : 319,
-    "Image_URL" : "https://drive.google.com/file/d/1VDbYr97aPuOdPNNWoqDYbzMbVgN2YpTP/view?usp=drive_link"
-}
-
-
-
-
-{
-    "Id" : 61,
-    "Model" : "Барный",
-    "Description" : "Барный стул с асимметричной спинкой и сиденьем из узорчатого велюра на деревянном каркасе с металлическими элементами.",
-    "Price" : 319,
-    "Image_URL" : "https://drive.google.com/file/d/1pCmcsrOkP6iRYRBPrtalUQ15-_tPWOh8/view?usp=drivesdk"
-},
-{
-    "Id" : 62,
-    "Model" : "Барный",
-    "Description" : "Барный стул с изогнутым металлическим каркасом и мягким сиденьем со спинкой из ткани с абстрактным принтом.",
-    "Price" : 269,
-    "Image_URL" : "https://drive.google.com/file/d/1vvSSdC4_okWnS4ChQgnQiaHXFx5GBzid/view?usp=drivesdk"
-},
-{
-    "Id" : 63,
-    "Model" : "Барный",
-    "Description" : "Барный стул с круглым сиденьем из экокожи и фигурными ножками, обвитыми декоративным шнуром.",
-    "Price" : 219,
-    "Image_URL" : "https://drive.google.com/file/d/1fo8vvKlHHF_nnm0x6-a8E8w4h36kB8Zt/view?usp=drivesdk"
-},
-{
-    "Id" : 64,
-    "Model" : "Барный",
-    "Description" : "Барный стул с мягким сиденьем и спинкой из велюра с декоративной отделкой по периметру на деревянных ножках.",
-    "Price" : 239,
-    "Image_URL" : "https://drive.google.com/file/d/123f4NT-6jYF7NraQWDb4pKIQHlPHU3db/view?usp=drivesdk"
-},
-{
-    "Id" : 65,
-    "Model" : "Барный",
-    "Description" : "Барный стул с мягким сиденьем и горизонтальной спинкой из велюра на металлическом каркасе.",
-    "Price" : 289,
-    "Image_URL" : "https://drive.google.com/file/d/1bnCDofYEbUK-CzAWzCKeJ8DHxO2u001x/view?usp=drivesdk"
-}
-{
-    "Id" : 66,
-    "Model" : "Барный",
-    "Description" : "Барный стул с круглой спинкой и сиденьем из фактурной ткани на деревянных ножках с металлическим кольцом.",
-    "Price" : 249,
-    "Image_URL" : "https://drive.google.com/file/d/1UqLETuL7pfSQwjFgMd-_fh4Nd4Ch0ejA/view?usp=drivesdk"
-},
-{
-    "Id" : 67,
-    "Model" : "Барный",
-    "Description" : "Барный стул с цилиндрической спинкой и мягким сиденьем из светлой ткани на деревянном каркасе.",
-    "Price" : 219,
-    "Image_URL" : "https://drive.google.com/file/d/1SSoBe0K1HftCK5dzLBcdmtWDlp63mH-e/view?usp=drivesdk"
-},
-{
-    "Id" : 68,
-    "Model" : "Барный",
-    "Description" : "Барный стул без спинки с круглым сиденьем из ткани с геометрическим узором на деревянном основании.",
-    "Price" : 189,
-    "Image_URL" : "https://drive.google.com/file/d/1wWEFErNTObr6CLNIlJWLotNVALeSx1Tj/view?usp=drivesdk"
-},
-{
-    "Id" : 69,
-    "Model" : "Барный",
-    "Description" : "Барный стул с комбинированной обивкой сиденья и спинки из ткани на черных ножках с металлической подножкой.",
-    "Price" : 199,
-    "Image_URL" : "https://drive.google.com/file/d/1mFzVEuWVxGiqOGjE4f2Rz1P5n52A96gf/view?usp=drivesdk"
-},
-{
-    "Id" : 70,
-    "Model" : "Барный",
-    "Description" : "Барный стул с горизонтальной спинкой и мягким ребристым сиденьем из велюра на металлическом каркасе.",
-    "Price" : 279,
-    "Image_URL" : "https://drive.google.com/file/d/1WNSZ4RKzlv2TPG7vtw41mFLioCIUmF3m/view?usp=drivesdk"
-}
-
-
-
-{
-    "Id" : 71,
-    "Model" : "Обеденный",
-    "Description" : "Обеденный стул с комбинированной обивкой спинки из ткани на деревянных ножках с металлическими наконечниками.",
-    "Price" : 189,
-    "Image_URL" : "https://drive.google.com/file/d/1PLRD_1I2OIYEhmr62eyOttan4z9uISOA/view?usp=drivesdk"
-},
-{
-    "Id" : 72,
-    "Model" : "Обеденный",
-    "Description" : "Обеденный стул с глянцевым деревянным каркасом и мягким сиденьем из экокожи.",
-    "Price" : 229,
-    "Image_URL" : "https://drive.google.com/file/d/11ZDbaKImiNbP3ybIuilGFwzRbkhevIFq/view?usp=drivesdk"
-},
-{
-    "Id" : 73,
-    "Model" : "Обеденный",
-    "Description" : "Обеденный стул с декоративной фигурной спинкой из дерева и мягким сиденьем из велюра.",
-    "Price" : 259,
-    "Image_URL" : "https://drive.google.com/file/d/16ISBOTWFsQuavZ9FwAUZ6uEPJizvWkmO/view?usp=drivesdk"
-},
-{
-    "Id" : 74,
-    "Model" : "Обеденный",
-    "Description" : "Обеденный стул с изогнутым деревянным подлокотником и сиденьем из фактурной ткани.",
-    "Price" : 219,
-    "Image_URL" : "https://drive.google.com/file/d/10llXYbnjOgwu0IUsA2x7WkR7zpQ3QIyJ/view?usp=drivesdk"
-},
-{
-    "Id" : 75,
-    "Model" : "Обеденный",
-    "Description" : "Обеденный стул с деревянным каркасом и мягкой обивкой из экокожи.",
-    "Price" : 249,
-    "Image_URL" : "https://drive.google.com/file/d/1gUmR29f0aPUC-psv4tMrniZEBRk4WaVZ/view?usp=drivesdk"
-}
-{
-    "Id" : 76,
-    "Model" : "Обеденный",
-    "Description" : "Обеденный стул с фигурной спинкой с вырезом и мягкой обивкой из велюра на деревянных ножках.",
-    "Price" : 199,
-    "Image_URL" : "https://drive.google.com/file/d/14l_YflcqDJLtuE5OLJYMWDA9eX71-Qq_/view?usp=drivesdk"
-},
-{
-    "Id" : 77,
-    "Model" : "Обеденный",
-    "Description" : "Обеденный стул с обтекаемой спинкой и комбинированной обивкой на тонких деревянных ножках.",
-    "Price" : 229,
-    "Image_URL" : "https://drive.google.com/file/d/1g0VouHpUVBRS1bBLgZA-PZUu1fiv3az4/view?usp=drivesdk"
-},
-{
-    "Id" : 78,
-    "Model" : "Обеденный",
-    "Description" : "Обеденный стул с подлокотниками и обивкой из ткани с геометрическим узором на деревянном каркасе.",
-    "Price" : 269,
-    "Image_URL" : "https://drive.google.com/file/d/1QM7X4qVw7rpMh7OHqV78LgeSgK8irr_6/view?usp=drivesdk"
-},
-{
-    "Id" : 79,
-    "Model" : "Обеденный",
-    "Description" : "Обеденный стул с высокой спинкой и мягкой обивкой из экокожи на деревянных ножках.",
-    "Price" : 239,
-    "Image_URL" : "https://drive.google.com/file/d/1u5s_8d3BzInH1fuq22w3TKe57M_q_H3X/view?usp=drivesdk"
-},
-{
-    "Id" : 80,
-    "Model" : "Обеденный",
-    "Description" : "Обеденный стул с круглой спинкой и мягким сиденьем из ткани на массивных деревянных ножках.",
-    "Price" : 189,
-    "Image_URL" : "https://drive.google.com/file/d/1CEOI4Nu0Tw8fCECrejdSW2cU7E-t4YJI/view?usp=drivesdk"
-}
 
 
 
 	
-	
-	
-	
+    {
+        "Id": 41,
+        "Model": "Компьютерное",
+        "Description": "Черное компьютерное кресло с вертикальной канальной прострочкой из экокожи на вращающейся крестовине.",
+        "Price": 159,
+        "Image_URL": ""
+    },
+    {
+        "Id": 42,
+        "Model": "Компьютерное",
+        "Description": "Черное компьютерное кресло с высокой спинкой из экокожи, квадратной прострочкой и хромированными подлокотниками.",
+        "Price": 269,
+        "Image_URL": ""
+    },
+    {
+        "Id": 43,
+        "Model": "Компьютерное",
+        "Description": "Белое компьютерное кресло с мягкими подушками и хромированным каркасом из экокожи.",
+        "Price": 299,
+        "Image_URL": ""
+    },
+    {
+        "Id": 44,
+        "Model": "Компьютерное",
+        "Description": "Светло-серое компьютерное кресло из велюра с каретной стяжкой и декоративными металлическими шипами.",
+        "Price": 189,
+        "Image_URL": ""
+    },
+    {
+        "Id": 45,
+        "Model": "Компьютерное",
+        "Description": "Черное компьютерное кресло с сетчатой спинкой и мягким тканевым сиденьем на пластиковом основании.",
+        "Price": 139,
+        "Image_URL": ""
+    }
+{
+    "Id": 46,
+    "Model": "Компьютерное",
+    "Description": "Черное компьютерное кресло из экокожи с округлой спинкой на хромированной крестовине.",
+    "Price": 149,
+    "Image_URL": ""
+},
+{
+    "Id": 47,
+    "Model": "Компьютерное",
+    "Description": "Светло-бежевое компьютерное кресло из велюра с хромированным основанием.",
+    "Price": 169,
+    "Image_URL": ""
+},
+{
+    "Id": 48,
+    "Model": "Компьютерное",
+    "Description": "Темно-синее компьютерное кресло из велюра с каретной стяжкой на хромированной базе.",
+    "Price": 199,
+    "Image_URL": ""
+},
+{
+    "Id": 49,
+    "Model": "Компьютерное",
+    "Description": "Коричневое компьютерное кресло из ворсистой ткани с хромированными подлокотниками.",
+    "Price": 219,
+    "Image_URL": ""
+},
+{
+    "Id": 50,
+    "Model": "Компьютерное",
+    "Description": "Коричневое компьютерное кресло из экокожи с высокой спинкой и хромированными подлокотниками.",
+    "Price": 239,
+    "Image_URL": ""
+}
+
+
+
+	{
+    "Id": 51,
+    "Model": "Кресло-качалка",
+    "Description": "Черное плетеное кресло-качалка с деревянным каркасом и мягкими подушками.",
+    "Price": 259,
+    "Image_URL": ""
+},
+{
+    "Id": 52,
+    "Model": "Кресло-качалка",
+    "Description": "Кресло-качалка с гнутым деревянным основанием и обивкой из велюра с абстрактным принтом.",
+    "Price": 319,
+    "Image_URL": ""
+},
+{
+    "Id": 53,
+    "Model": "Кресло-качалка",
+    "Description": "Черное кресло-качалка из полимерного шнура на металлическом каркасе.",
+    "Price": 199,
+    "Image_URL": ""
+},
+{
+    "Id": 54,
+    "Model": "Кресло-качалка",
+    "Description": "Светло-серое кресло-качалка с мягкой тканевой обивкой и деревянными полозьями.",
+    "Price": 289,
+    "Image_URL": ""
+},
+{
+    "Id": 55,
+    "Model": "Кресло-качалка",
+    "Description": "Черное кресло-качалка с плетеным сиденьем на металлическом основании.",
+    "Price": 229,
+    "Image_URL": ""
+}
+{
+    "Id": 56,
+    "Model": "Кресло-качалка",
+    "Description": "Черное кресло-качалка с горизонтальной прострочкой и изогнутым деревянным основанием.",
+    "Price": 249,
+    "Image_URL": ""
+},
+{
+    "Id": 57,
+    "Model": "Кресло-качалка",
+    "Description": "Светло-серое кресло-качалка из ткани букле с гнутым деревянным каркасом.",
+    "Price": 329,
+    "Image_URL": ""
+},
+{
+    "Id": 58,
+    "Model": "Кресло-качалка",
+    "Description": "Черное кожаное кресло-качалка с хромированным металлическим каркасом и квадратной стяжкой.",
+    "Price": 349,
+    "Image_URL": ""
+},
+{
+    "Id": 59,
+    "Model": "Кресло-качалка",
+    "Description": "Классическое деревянное кресло-качалка с темным каркасом и светлыми тканевыми подушками.",
+    "Price": 189,
+    "Image_URL": ""
+},
+{
+    "Id": 60,
+    "Model": "Кресло-качалка",
+    "Description": "Черное деревянное кресло-качалка с обивкой из ребристой кожи.",
+    "Price": 279,
+    "Image_URL": ""
+}
+
+
+
+	{
+    "Id": 61,
+    "Model": "Барный стул",
+    "Description": "Барный стул с бежевой велюровой обивкой, темными деревянными ножками и латунными деталями.",
+    "Price": 189,
+    "Image_URL": ""
+},
+{
+    "Id": 62,
+    "Model": "Барный стул",
+    "Description": "Барный стул с розовой мраморной обивкой и изогнутым золотым металлическим каркасом.",
+    "Price": 229,
+    "Image_URL": ""
+},
+{
+    "Id": 63,
+    "Model": "Барный стул",
+    "Description": "Барный стул с темным глянцевым деревянным каркасом и светлой кожаной сидушкой.",
+    "Price": 169,
+    "Image_URL": ""
+},
+{
+    "Id": 64,
+    "Model": "Барный стул",
+    "Description": "Черный барный стул из велюра с каретной стяжкой и металлической подножкой.",
+    "Price": 199,
+    "Image_URL": ""
+},
+{
+    "Id": 65,
+    "Model": "Барный стул",
+    "Description": "Черный барный стул из экокожи с металлическим Z-образным основанием.",
+    "Price": 149,
+    "Image_URL": ""
+}
+	{
+    "Id": 66,
+    "Model": "Барный",
+    "Description": "Темный барный табурет с витыми латунными элементами на деревянных ножках и круглым сиденьем.",
+    "Price": 179,
+    "Image_URL": ""
+},
+{
+    "Id": 67,
+    "Model": "Барный",
+    "Description": "Деревянный барный табурет на конусовидном основании с черной подножкой и узорчатой подушкой.",
+    "Price": 149,
+    "Image_URL": ""
+},
+{
+    "Id": 68,
+    "Model": "Барный",
+    "Description": "Светло-серый барный стул с круглым вырезом в спинке и двухцветными ножками.",
+    "Price": 189,
+    "Image_URL": ""
+},
+{
+    "Id": 69,
+    "Model": "Барный",
+    "Description": "Барный стул с цилиндрическим основанием в черно-белом узоре и черным металлическим каркасом.",
+    "Price": 219,
+    "Image_URL": ""
+},
+{
+    "Id": 70,
+    "Model": "Барный",
+    "Description": "Прозрачный дымчатый барный стул из пластика на хромированной ножке с подножкой.",
+    "Price": 169,
+    "Image_URL": ""
+}
+
+
+
+
+	{
+    "Id": 71,
+    "Model": "Обеденный",
+    "Description": "Стул с высокой изогнутой спинкой из светлой ткани, темным деревянным каркасом и декоративными заклепками.",
+    "Price": 189,
+    "Image_URL": ""
+},
+{
+    "Id": 72,
+    "Model": "Обеденный",
+    "Description": "Черный стул с обивкой из экокожи и лаконичным деревянным каркасом темного оттенка.",
+    "Price": 149,
+    "Image_URL": ""
+},
+{
+    "Id": 73,
+    "Model": "Обеденный",
+    "Description": "Черный велюровый стул с фигурной спинкой и темными ножками.",
+    "Price": 169,
+    "Image_URL": ""
+},
+{
+    "Id": 74,
+    "Model": "Обеденный",
+    "Description": "Стул с темным деревянным каркасом, светлым сиденьем и спинкой из узорчатой ткани.",
+    "Price": 199,
+    "Image_URL": ""
+},
+{
+    "Id": 75,
+    "Model": "Обеденный",
+    "Description": "Стул с круглой спинкой и сиденьем из светлой ткани, черными ножками и золотистым ободком.",
+    "Price": 129,
+    "Image_URL": ""
+}
+	{
+    "Id": 76,
+    "Model": "Обеденный",
+    "Description": "Стул с черным плетеным каркасом спинки и сиденьем из серой фактурной ткани на изогнутых ножках.",
+    "Price": 159,
+    "Image_URL": ""
+},
+{
+    "Id": 77,
+    "Model": "Обеденный",
+    "Description": "Черный стул с подлокотниками, овальной спинкой с абстрактным узором и мягким сиденьем.",
+    "Price": 179,
+    "Image_URL": ""
+},
+{
+    "Id": 78,
+    "Model": "Обеденный",
+    "Description": "Стул из темного дерева с цельной изогнутой спинкой-подлокотником и сиденьем из светлой узорчатой ткани.",
+    "Price": 169,
+    "Image_URL": ""
+},
+{
+    "Id": 79,
+    "Model": "Обеденный",
+    "Description": "Светло-бежевый велюровый стул с подлокотниками, контрастной черной вставкой на спинке и черными ножками.",
+    "Price": 189,
+    "Image_URL": ""
+},
+{
+    "Id": 80,
+    "Model": "Обеденный",
+    "Description": "Стул с темным деревянным каркасом, фигурной спинкой с плетеным элементом и черным бархатным сиденьем.",
+    "Price": 199,
+    "Image_URL": ""
+}
+
+
 	
 ]
